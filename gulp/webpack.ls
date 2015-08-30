@@ -45,7 +45,7 @@ defaultConfig = {
 }
 
 if process.env.NODE_ENV !== \production
-    defaultConfig.devtool = '#eval-source-map'
+    defaultConfig.devtool = 'sourcemap'
     defaultConfig.debug = true
 
 /*==========================================================

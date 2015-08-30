@@ -4,27 +4,55 @@ require! {
     "lokijs": lokijs
 }
 
+/*================================================================
+*
+*   Global variables 
+*
+*================================================================*/
 char_list = []
 
+rare_name_list = [
+    \iron
+    \bronze
+    \silver
+    \golden
+    \platinum
+    \black
+    \sapphire
+]
+
+/*================================================================
+*
+*   Utils 
+*
+*================================================================*/
 escape = (char) ->
     return char.replace(/Lv|\*|-|ランク200/, "")
 
 to_number = (char) ->
-    clean_char = escape char 
+    clean_char = escape char
 
     if clean_char.trim!
         result = parseInt(clean_char)
     else
         result = 0
 
-    if result === NaN 
-        console.log "to_number failed:", char 
+    if result === NaN
+        console.log "to_number failed:", char
 
     return result
 
+/*================================================================
+*
+*   Data modules 
+*
+*================================================================*/
 class Char
     (name)->
         @name = name
+        @type = ""
+        @rare = ""
+
         @class_list = []
 
     add_class_data: (class_data)->
@@ -61,20 +89,25 @@ class Favor
         @stun = 0
 
         type_list = {
-            "HP+": \hp 
+            "HP+": \hp
             "攻撃力+": \at
-            "防御力+": \def 
+            "防御力+": \def
             "攻撃硬直-": \stun
         }
 
         for item in favor.split ";"
             for key, value of type_list
-                if item.indexOf(key) == 0 
-                    @[value] = to_number item.replace(key, "")  
+                if item.indexOf(key) == 0
+                    @[value] = to_number item.replace(key, "")
 
-read_data = (filename, callback) ->
+/*================================================================
+*
+*   Parser 
+*
+*================================================================*/
+read_data = (filename, container, callback) ->
 
-    (err, data) <- fs.readFile filename 
+    (err, data) <- fs.readFile filename
 
     # Read file
     if err
@@ -159,19 +192,50 @@ read_data = (filename, callback) ->
 
             char.add_class_data class_data
 
-        char_list[*] = char
+        container[*] = char
 
     callback!
 
-<- read_data \raw_fight_data.html
-<- read_data \raw_range_data.html
+/*================================================================
+*
+*   Main
+*
+*================================================================*/
 
+update_rare = (rare_name, collection) ->
+    rare_list = []
+
+    new Promise (resolve, reject) ->
+        <- read_data rare_name + "_data.html", rare_list
+
+        for rare_item in rare_list
+            char = collection.findOne({name: rare_item.name})
+            if rare_item.name and char
+                char.rare = rare_name
+                collection.update char
+
+        resolve rare_list
+
+
+<- read_data \raw_fight_data.html, char_list
+for char in char_list
+    char.type = \melee
+
+<- read_data \raw_range_data.html, char_list
+for char in char_list
+    char.type = \range
+
+# Save to database
 db = new lokijs "sennen.json"
 collection = db.addCollection \char
 
 for char in char_list
-    console.log JSON.stringify char
-    collection.insert char
+    if char.name
+        collection.insert char
 
+# Merge rare data
+tasks = for rare_name in rare_name_list
+            update_rare(rare_name, collection)
+
+(result) <- Promise.all(tasks).then
 db.save!
-
