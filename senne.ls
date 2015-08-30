@@ -52,6 +52,7 @@ class Char
         @name = name
         @type = ""
         @rare = ""
+        @img = ""
 
         @class_list = []
 
@@ -107,7 +108,9 @@ class Favor
 *================================================================*/
 read_data = (filename, container, callback) ->
 
-    (err, data) <- fs.readFile filename
+    data_folder = "raw/"
+
+    (err, data) <- fs.readFile data_folder + filename
 
     # Read file
     if err
@@ -124,6 +127,9 @@ read_data = (filename, container, callback) ->
         name = $($(name_table).find("a.load").nextAll![*-1])text!
 
         char = new Char name
+
+        img = $(elem).find("a.load img").attr \src
+        char.img = img
 
         for i to status_table.length - 1 by 2
             min = status_table[i]
@@ -216,11 +222,12 @@ update_rare = (rare_name, collection) ->
 
         resolve rare_list
 
-
+# Read melee data
 <- read_data \raw_fight_data.html, char_list
 for char in char_list
     char.type = \melee
 
+# Read range data
 <- read_data \raw_range_data.html, char_list
 for char in char_list
     char.type = \range

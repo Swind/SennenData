@@ -4,7 +4,9 @@ require! {
     "deep-merge": DeepMerge
     "path": path
     "webpack": webpack
+    "webpack-dev-server": WebpackDevServer 
     "fs": fs
+    "html-webpack-plugin": HtmlWebpackPlugin
 }
 
 /*==========================================================
@@ -14,6 +16,8 @@ require! {
 ============================================================*/
 
 bower_dir = __dirname + "/../bower_components"
+node_dir = __dirname + "/../node_modules"
+build_dir = __dirname + "/../build"
 
 defaultConfig = {
     cache: true
@@ -70,7 +74,7 @@ fs.readdirSync \node_modules
 addVendor = (type, name, path, config) ->
     config.resolve.alias[name] = path
 
-    config.module.noParse.push new RegExp '^' + name + '$'
+    config.module.noParse.push new RegExp name
 
     if type == \js
         config.entry.vendors.push name
@@ -87,6 +91,61 @@ onBuild = (done)->
 
         if done
             done!
+
+/*==========================================================
+*
+*    Frontend 
+*
+============================================================*/
+
+frontendConfig = config {
+    entry: {
+        bundle: "./web/sennen.ls"
+        vendors: []
+    }
+    module:{
+        noParse: []
+    }
+    resolve:{
+        alias:{
+        }
+    }
+    output: {
+        path: build_dir 
+        filename: "frontend.js"
+    }
+    plugins: [
+        new HtmlWebpackPlugin {
+            template: "web/index.html"
+            inject: true
+        }
+        new webpack.optimize.CommonsChunkPlugin "vendors", "vendors.js"
+    ]
+}
+
+addVendor \js, \lokijs, node_dir + "/lokijs/src/lokijs.js", frontendConfig
+
+gulp.task \frontend-build, (done)->
+    webpack(frontendConfig).run onBuild done
+
+gulp.task \frontend-watch, (done)->
+    webpack(frontendConfig).watch 100, onBuild!
+
+gulp.task \dev-server, (done)->
+    compiler = webpack frontendConfig
+    new WebpackDevServer(compiler, {
+        contentBase: "./build/"
+        hot: true
+        watchOptions:
+            aggregateTimeout: 100
+            poll: 300
+    }).listen 8080, \localhost, (err) ->
+        if err
+            throw new gutil.PluginError \webpack-dev-server, err
+
+        gutil.log "[webpack-dev-server]", "http://localhost:8080/index.html"
+
+    done!
 
 /*==========================================================
 *
