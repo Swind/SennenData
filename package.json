@@ -1,0 +1,31 @@
+{
+  "name": "Senne",
+  "version": "0.0.1",
+  "author": "Swind <swind@code-life.info>",
+  "description": "Senne Database",
+  "homepage": "",
+  "license": [
+    {
+      "type": "MIT",
+      "url": ""
+    }
+  ],
+  "devDependencies": {
+    "gulp": "^3.7.0",
+    "gulp-util": "",
+    "webpack": "",
+    "webpack-dev-server":"",
+    "livescript-loader": "",
+    "livescript": "",
+    "require-dir": "^0.1.0",
+    "bower": "",
+    "json-loader": "",
+    "source-map-support": ""
+  },
+  "dependencies": {
+    "ws": "",
+    "deep-merge":"",
+    "cheerio":"",
+    "lokijs":""
+  }
+}
