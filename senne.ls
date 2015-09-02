@@ -135,7 +135,7 @@ read_data = (filename, container, callback) ->
             min = status_table[i]
             max = status_table[i+1]
 
-            class_name = $(min).find('td[rowspan=2][style="text-align:center; width:100px;"]').text!
+            class_name = $($(min).find('td')[1]).text!
 
             # Min LV 
             $(min).find("br").text(";")
