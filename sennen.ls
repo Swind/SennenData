@@ -1,7 +1,6 @@
 require! {
     "fs": fs
     "cheerio": cheerio
-    "lokijs": lokijs
 }
 
 /*================================================================
@@ -135,7 +134,7 @@ read_data = (filename, container, callback) ->
             min = status_table[i]
             max = status_table[i+1]
 
-            class_name = $($(min).find('td')[1]).text!
+            class_name = $($(min).find('td[style="text-align:center; width:100px;"]')[*-1]).text!
 
             # Min LV 
             $(min).find("br").text(";")
@@ -212,37 +211,34 @@ update_rare = (rare_name, collection) ->
     rare_list = []
 
     new Promise (resolve, reject) ->
-        <- read_data rare_name + "_data.html", rare_list
+        <- read_data rare_name + ".html", rare_list
 
         for rare_item in rare_list
-            char = collection.findOne({name: rare_item.name})
-            if rare_item.name and char
-                char.rare = rare_name
-                collection.update char
+            for char in char_list
+                if char.name == rare_item.name and rare_item.name and char
+                    char.rare = rare_name
 
         resolve rare_list
 
 # Read melee data
-<- read_data \raw_fight_data.html, char_list
+<- read_data \melee.html, char_list
 for char in char_list
     char.type = \melee
 
 # Read range data
-<- read_data \raw_range_data.html, char_list
+<- read_data \range.html, char_list
 for char in char_list
     char.type = \range
 
-# Save to database
-db = new lokijs "sennen.json"
-collection = db.addCollection \char
-
-for char in char_list
-    if char.name
-        collection.insert char
-
-# Merge rare data
+# Read rare data and merge that
 tasks = for rare_name in rare_name_list
-            update_rare(rare_name, collection)
+            update_rare(rare_name, char_list)
 
-(result) <- Promise.all(tasks).then
-db.save!
+# Save char to json file
+
+(err) <- fs.writeFile \sennen.json, JSON.stringify char_list, "utf-8"
+
+if err
+    return console.log err
+
+console.log "Done!"

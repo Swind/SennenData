@@ -24,7 +24,6 @@ th-list = [
     \射程
     \ブロック
     \コスト
-    \ボーナス
 ]
 
 table-header = thead {},
@@ -32,39 +31,50 @@ table-header = thead {},
                        for th-value, i in th-list
                            th {key: i}, th-value
 
-table-data = (data) -> do
-                base_class = data.class_list[0]
-                max = base_class.max
+class-data-td = React.createClass do
+                render: ! ->
+                    class_data = @props.class_data
+                    char_name = @props.char_name
 
-                tbody {},
-                    # Base class
-                    tr {},
-                        td {}, data.name
-                        td {}, base_class.name
-                        td {}, max.lv
-                        td {}, max.hp
-                        td {}, max.at
-                        td {}, max.def
-                        td {}, base_class.magic
-                        td {}, base_class.range
-                        td {}, base_class.block
-                        td {}, base_class.max_cost
-                        td {}, base_class.favor
+                    max = class_data.max
+                    min = class_data.min
 
-char-data-table = (data) -> do
-                            table-data data
+                    return tr {}, 
+                                td {rowSpan:3}, char_name 
+                                td {}, class_data.name
+                                td {}, max.lv
+                                td {}, max.hp
+                                td {}, max.at
+                                td {}, max.def
+                                td {}, class_data.magic
+                                td {}, class_data.range
+                                td {}, class_data.block
+                                td {}, class_data.max_cost
+                    
+
+
+table-data = React.createClass do
+             render: ! ->
+                 class-data-td-elem = React.createFactory class-data-td 
+                 data = @props.char
+
+                 base_class = ! ->
+
+                 return tbody {},
+                            class-data-td-elem {char_name:data.name, class_data: data.class_list[0]}
 
 module.exports = CharList = React.createClass do
     getInitialState: ->
         return {all: CharStore.get_all!}
 
     render: ->
+        table-data-elem = React.createFactory table-data
         return div {className: "mdl-grid"},
                    div {className: "mdl-cell mdl-cell--12-col"},
                        table {className: mdl-table}, 
                             table-header
-                            for char in @state.all
-                                char-data-table char
+                            for char, i in @state.all
+                                table-data-elem {key: i, char: char}
 
     componentDidMount: ->
         CharStore.addChangeListener @._onChange

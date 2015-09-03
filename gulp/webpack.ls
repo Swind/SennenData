@@ -100,11 +100,19 @@ onBuild = (done)->
 
 frontendConfig = config {
     entry: {
+        webpack-dev-server: "webpack-dev-server/client?http://0.0.0.0:8080"
+        only-dev-server: "webpack/hot/only-dev-server"
         bundle: "./web/sennen.ls"
         vendors: []
     }
     module:{
         noParse: []
+        loaders: [
+            {
+                test: /\.ls?%/
+                loaders: 'react-hot'
+            }
+        ]
     }
     resolve:{
         alias:{
@@ -112,7 +120,7 @@ frontendConfig = config {
     }
     output: {
         path: build_dir 
-        filename: "frontend.js"
+        filename: "[name].js"
     }
     plugins: [
         new HtmlWebpackPlugin {
@@ -120,6 +128,7 @@ frontendConfig = config {
             inject: true
         }
         new webpack.optimize.CommonsChunkPlugin "vendors", "vendors.js"
+        new webpack.HotModuleReplacementPlugin!
     ]
 }
 
@@ -153,12 +162,14 @@ gulp.task \dev-server, (done)->
 *
 ============================================================*/
 backendConfig = config {
-  entry: "./senne.ls"
+  entry: { 
+      parser: "./sennen.ls"
+      crawler: "./raw.ls"
+  } 
   target: \node
   output:{
     path: "./build"
-    public:Path: "build/"
-    filename: \backend.js
+    filename: "[name].js"
   }
 
   plugins: [

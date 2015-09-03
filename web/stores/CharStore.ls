@@ -7,8 +7,10 @@ require! {
 }
 
 db = new lokijs
-db.loadJSON JSON.stringify sennen_data
-char = db.getCollection \char
+char_db = db.addCollection \char
+
+for item in sennen_data
+    char_db.insert item
 
 module.exports = CharStore = new events.EventEmitter! <<< do
     emitChange: ->
@@ -21,7 +23,7 @@ module.exports = CharStore = new events.EventEmitter! <<< do
         @removeListener Constants.CHANGE_EVENT, callback
 
     get_all: ->
-        return char.find!
+        return char_db.find!
 
 /*
 CharStore.dispatchToken = Dispatcher.register ({action}) ->
