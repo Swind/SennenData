@@ -4,6 +4,7 @@ require! {
     "events": events
     "lokijs": lokijs
     "../../sennen.json": sennen_data 
+    "react": React
 }
 
 db = new lokijs

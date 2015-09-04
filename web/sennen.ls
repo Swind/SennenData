@@ -3,6 +3,7 @@ require! {
     "../sennen.json": sennen_data 
     "./dispatcher/AppDispatcher": dispatcher
     "./stores/CharStore": CharStore 
+    "react": React
 }
 
 {div} = React.DOM

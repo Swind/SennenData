@@ -23,10 +23,6 @@ defaultConfig = {
     cache: true
     module:{
         loaders:
-          * test: /\.ls$/
-            loader: "livescript-loader"
-            exclude: /node_modules/
-
           * test: /\.json$/
             loader: "json-loader"
 
@@ -109,8 +105,9 @@ frontendConfig = config {
         noParse: []
         loaders: [
             {
-                test: /\.ls?%/
-                loaders: 'react-hot'
+                test: /\.ls$/
+                loaders: ["react-hot", "livescript-loader"]
+                exclude: /node_modules/
             }
         ]
     }
@@ -162,26 +159,32 @@ gulp.task \dev-server, (done)->
 *
 ============================================================*/
 backendConfig = config {
-  entry: { 
+    module:{
+        loaders:
+          * test: /\.ls$/
+            loader: "livescript-loader"
+            exclude: /node_modules/
+    }
+    entry: { 
       parser: "./sennen.ls"
       crawler: "./raw.ls"
-  } 
-  target: \node
-  output:{
+    } 
+    target: \node
+    output:{
     path: "./build"
     filename: "[name].js"
-  }
+    }
 
-  plugins: [
+    plugins: [
     new webpack.IgnorePlugin /\.(css|less|scss|sass)$/
     new webpack.ResolverPlugin(
         new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin("bower.json", ["main"])
     ),
     new webpack.BannerPlugin('require("source-map-support").install();',
                              { raw: true, entryOnly: false })
-  ]
+    ]
 
-  externals: nodeModules
+    externals: nodeModules
 }
 
 

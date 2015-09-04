@@ -30,6 +30,7 @@
     "cheerio":"",
     "lokijs":"",
     "request": "",
-    "jconv": ""
+    "jconv": "",
+    "react": ""
   }
 }

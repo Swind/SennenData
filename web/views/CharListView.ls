@@ -2,6 +2,7 @@ require! {
     "../dispatcher/AppDispatcher": Dispatcher
     "../constants/AppConstants": Constants
     "../stores/CharStore": CharStore
+    "react": React
 }
 
 {div, table, thead, tbody, th, tr, td} = React.DOM
