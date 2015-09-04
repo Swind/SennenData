@@ -166,8 +166,8 @@ backendConfig = config {
             exclude: /node_modules/
     }
     entry: { 
-      parser: "./sennen.ls"
-      crawler: "./raw.ls"
+      parser: "./parser/sennen.ls"
+      crawler: "./parser/raw.ls"
     } 
     target: \node
     output:{

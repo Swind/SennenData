@@ -10,6 +10,10 @@
       "url": ""
     }
   ],
+  "scripts": {
+      "crawler": "node build/crawler.js",
+      "parser": "node build/parser.js"
+  },
   "devDependencies": {
     "gulp": "^3.7.0",
     "gulp-util": "",

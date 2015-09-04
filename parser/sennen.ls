@@ -1,6 +1,7 @@
 require! {
     "fs": fs
     "cheerio": cheerio
+    "./data.ls": Data
 }
 
 /*================================================================
@@ -8,6 +9,7 @@ require! {
 *   Global variables 
 *
 *================================================================*/
+
 char_list = []
 
 rare_name_list = [
@@ -19,86 +21,6 @@ rare_name_list = [
     \black
     \sapphire
 ]
-
-/*================================================================
-*
-*   Utils 
-*
-*================================================================*/
-escape = (char) ->
-    return char.replace(/Lv|\*|-|ランク200/, "")
-
-to_number = (char) ->
-    clean_char = escape char
-
-    if clean_char.trim!
-        result = parseInt(clean_char)
-    else
-        result = 0
-
-    if result === NaN
-        console.log "to_number failed:", char
-
-    return result
-
-/*================================================================
-*
-*   Data modules 
-*
-*================================================================*/
-class Char
-    (name)->
-        @name = name
-        @type = ""
-        @rare = ""
-        @img = ""
-
-        @class_list = []
-
-    add_class_data: (class_data)->
-        @class_list[*] = class_data
-
-
-class ClassData
-    (name, min, max, magic, block, range, max_cost, min_cost, favor, skill_1, skill_2, skill_3="")->
-        @name = name
-        @min = min
-        @max = max
-        @magic = to_number magic
-        @block = to_number block
-        @range = to_number range
-        @max_cost = to_number max_cost
-        @min_cost = to_number min_cost
-        @favor = favor
-        @skill_1 = escape skill_1
-        @skill_2 = escape skill_2
-        @skill_3 = escape skill_3
-
-class LvData
-    (lv, hp, at, def)->
-        @lv = to_number lv
-        @hp = to_number hp
-        @at = to_number at
-        @def = to_number def
-
-class Favor
-    (favor)->
-        @hp = 0
-        @at = 0
-        @def = 0
-        @stun = 0
-
-        type_list = {
-            "HP+": \hp
-            "攻撃力+": \at
-            "防御力+": \def
-            "攻撃硬直-": \stun
-        }
-
-        for item in favor.split ";"
-            for key, value of type_list
-                if item.indexOf(key) == 0
-                    @[value] = to_number item.replace(key, "")
 
 /*================================================================
 *
@@ -125,7 +47,7 @@ read_data = (filename, container, callback) ->
         name_table = status_table[0]
         name = $($(name_table).find("a.load").nextAll![*-1])text!
 
-        char = new Char name
+        char = new Data.Char name
 
         img = $(elem).find("a.load img").attr \src
         char.img = img
@@ -143,7 +65,7 @@ read_data = (filename, container, callback) ->
             min_hp = $(min_lv_status[0]).text!
             min_at = $(min_lv_status[1]).text!
             min_def = $(min_lv_status[2]).text!
-            min_lv_data = new LvData min_lv.text!, min_hp, min_at, min_def
+            min_lv_data = new Data.LvData min_lv.text!, min_hp, min_at, min_def
 
             # Class status
             magic = $(min_lv_status[3]).text!
@@ -163,7 +85,7 @@ read_data = (filename, container, callback) ->
             min_cost = $(min_lv_status[6]).text!
 
             favor = $(min_lv_status[7]).text!
-            favor = new Favor(favor)
+            favor = new Data.Favor(favor)
 
             skill_1 = $(min_lv_status[8]).text!
             skill_2 = $(min_lv_status[9]).text!
@@ -175,14 +97,14 @@ read_data = (filename, container, callback) ->
             max_hp = $(max_lv_status[0]).text!
             max_at = $(max_lv_status[1]).text!
             max_def = $(max_lv_status[2]).text!
-            max_lv_data = new LvData max_lv.text!, max_hp, max_at, max_def
+            max_lv_data = new Data.LvData max_lv.text!, max_hp, max_at, max_def
 
             if max_lv_status.length > 3
                 skill_3 = $(max_lv_status[3]).text!
             else
                 skill_3 = ""
 
-            class_data = new ClassData class_name,
+            class_data = new Data.ClassData class_name,
                                        min_lv_data,
                                        max_lv_data,
                                        magic,
@@ -221,21 +143,31 @@ update_rare = (rare_name, collection) ->
         resolve rare_list
 
 # Read melee data
-<- read_data \melee.html, char_list
-for char in char_list
+melee_list = []
+<- read_data \melee.html, melee_list
+for char in melee_list
     char.type = \melee
+    char_list[*] = char
 
 # Read range data
-<- read_data \range.html, char_list
-for char in char_list
-    char.type = \range
+range_list = []
+<- read_data \range.html, range_list
+for char in range_list
+
+    # Filter the summon
+    if char.class_list[0].range != 0
+        char.type = \range
+    else
+        char.type = \melee
+
+    char_list[*] = char
+
 
 # Read rare data and merge that
 tasks = for rare_name in rare_name_list
             update_rare(rare_name, char_list)
 
 # Save char to json file
-
 (err) <- fs.writeFile \sennen.json, JSON.stringify char_list, "utf-8"
 
 if err

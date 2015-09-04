@@ -7,6 +7,7 @@ require! {
     "react": React
 }
 
+# Import all char to lokijs for searching
 db = new lokijs
 char_db = db.addCollection \char
 
@@ -25,6 +26,12 @@ module.exports = CharStore = new events.EventEmitter! <<< do
 
     get_all: ->
         return char_db.find!
+
+    get_melee: ->
+        return char_db.find {type:\melee}
+
+    get_range: ->
+        return char_db.find {type:\range}
 
 /*
 CharStore.dispatchToken = Dispatcher.register ({action}) ->
