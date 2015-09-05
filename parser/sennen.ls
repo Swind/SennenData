@@ -71,9 +71,14 @@ read_data = (filename, container, callback) ->
             magic = $(min_lv_status[3]).text!
 
             block_range = $(min_lv_status[4]).text!.trim!.split ";"
-            if block_range.length > 1 
-                block = block_range[0]
-                range = block_range[1]
+            if block_range.length > 1
+                if block_range[1].startsWith \+
+                    block = "" 
+                    range = block_range[1]
+                else
+                    block = block_range[0] 
+                    range = block_range[1]
+
             else if block_range[0].length > 2
                 block = "" 
                 range = block_range[0]
