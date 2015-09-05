@@ -26,7 +26,10 @@
     "bower": "",
     "json-loader": "",
     "source-map-support": "",
-    "react-hot-loader": ""
+    "react-hot-loader": "",
+    "style-loader": "",
+    "sass-loader": "",
+    "css-loader": ""
   },
   "dependencies": {
     "ws": "",

@@ -26,6 +26,12 @@ frontendDevConfig = {
     module:{
         noParse: []
         loaders: [
+              * test: /\.css$/
+                loader: 'style-loader!css-loader'
+
+              * test: /\.scss$/
+                loader: 'style!css!sass'
+
               * test: /\.ls$/
                 loaders: ["react-hot", "livescript-loader"]
                 exclude: /node_modules/
@@ -59,9 +65,9 @@ addVendor \js, \lokijs, node_dir + "/lokijs/src/lokijs.js", frontendDevConfig
 
 frontendConfig = ! -> 
     config = ^^frontendDevConfig
-    config.plugins[*] = new webpack.optimize.UglifyJsPlugin!
-    delete config[\devtool]
-    delete config[\debug]
+    #config.plugins[*] = new webpack.optimize.UglifyJsPlugin!
+    #delete config[\devtool]
+    #delete config[\debug]
     return config
 
 

@@ -4,6 +4,7 @@ require! {
     "./dispatcher/AppDispatcher": dispatcher
     "./stores/CharStore": CharStore 
     "react": React
+    "./scss/sennen.scss": sennen-css
 }
 
 {div, a} = React.DOM

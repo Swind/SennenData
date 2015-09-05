@@ -43,16 +43,16 @@ class Char
 
 
 class ClassData
-    (name, min, max, magic, block, range, max_cost, min_cost, favor, skill_1, skill_2, skill_3="")->
+    (name, min, max, resist, block, range, max_cost, min_cost, bonus, skill_1, skill_2, skill_3="")->
         @name = name
         @min = min
         @max = max
-        @magic = to_number magic
+        @resist = to_number resist
         @block = to_number block
         @range = to_number range
         @max_cost = to_number max_cost
         @min_cost = to_number min_cost
-        @favor = favor
+        @bonus = bonus
         @skill_1 = escape skill_1
         @skill_2 = escape skill_2
         @skill_3 = escape skill_3
@@ -64,8 +64,8 @@ class LvData
         @at = to_number at
         @def = to_number def
 
-class Favor
-    (favor)->
+class Bonus
+    (bonus)->
         @hp = 0
         @at = 0
         @def = 0
@@ -78,7 +78,7 @@ class Favor
             "攻撃硬直-": \stun
         }
 
-        for item in favor.split ";"
+        for item in bonus.split ";"
             for key, value of type_list
                 if item.indexOf(key) == 0
                     @[value] = to_number item.replace(key, "")
@@ -87,5 +87,5 @@ module.exports = {
     "Char": Char
     "ClassData": ClassData
     "LvData": LvData
-    "Favor": Favor
+    "Bonus": Bonus
 }

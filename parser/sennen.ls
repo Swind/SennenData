@@ -13,13 +13,13 @@ require! {
 char_list = []
 
 rare_name_list = {
-    iron: 1
-    bronze: 2
-    silver: 3
-    golden: 4
-    platinum: 5
-    black: 6
-    sapphire: 7
+    iron: ["アイアン", 1]
+    bronze: ["ブロンズ", 2]
+    silver: ["シルバー", 3]
+    golden: ["ゴールド", 4]
+    platinum: ["プラチナ", 5]
+    black: ["ブラック", 6]
+    sapphire: ["サファイア", 7]
 }
 
 /*================================================================
@@ -68,7 +68,7 @@ read_data = (filename, container, callback) ->
             min_lv_data = new Data.LvData min_lv.text!, min_hp, min_at, min_def
 
             # Class status
-            magic = $(min_lv_status[3]).text!
+            resist = $(min_lv_status[3]).text!
 
             block_range = $(min_lv_status[4]).text!.trim!.split ";"
 
@@ -95,8 +95,8 @@ read_data = (filename, container, callback) ->
             max_cost = $(min_lv_status[5]).text!
             min_cost = $(min_lv_status[6]).text!
 
-            favor = $(min_lv_status[7]).text!
-            favor = new Data.Favor(favor)
+            bonus = $(min_lv_status[7]).text!
+            bonus = new Data.Bonus(bonus)
 
             skill_1 = $(min_lv_status[8]).text!
             skill_2 = $(min_lv_status[9]).text!
@@ -118,12 +118,12 @@ read_data = (filename, container, callback) ->
             class_data = new Data.ClassData class_name,
                                        min_lv_data,
                                        max_lv_data,
-                                       magic,
+                                       resist,
                                        block,
                                        range,
                                        max_cost,
                                        min_cost,
-                                       favor,
+                                       bonus,
                                        skill_1,
                                        skill_2,
                                        skill_3
@@ -142,7 +142,7 @@ read_data = (filename, container, callback) ->
 *
 *================================================================*/
 
-update_rare = (rare_name, rare_lv, collection) ->
+update_rare = (rare_name, rare_jp_name, rare_lv, collection) ->
     rare_list = []
 
     new Promise (resolve, reject) ->
@@ -151,7 +151,7 @@ update_rare = (rare_name, rare_lv, collection) ->
         for rare_item in rare_list
             for char in char_list
                 if char.name == rare_item.name and rare_item.name and char
-                    char.rare = rare_name
+                    char.rare = rare_jp_name
                     char.rare_lv = rare_lv
 
         resolve rare_list
@@ -178,8 +178,8 @@ for char in range_list
 
 
 # Read rare data and merge that
-tasks = for rare_name, rare_lv of rare_name_list
-            update_rare(rare_name, rare_lv, char_list)
+tasks = for rare_name, [rare_jp_name, rare_lv] of rare_name_list
+            update_rare(rare_name, rare_jp_name, rare_lv, char_list)
 
 # Wait all rare data merge finished
 (value) <- Promise.all(tasks).then
