@@ -12,15 +12,15 @@ require! {
 
 char_list = []
 
-rare_name_list = [
-    \iron
-    \bronze
-    \silver
-    \golden
-    \platinum
-    \black
-    \sapphire
-]
+rare_name_list = {
+    iron: 1
+    bronze: 2
+    silver: 3
+    golden: 4
+    platinum: 5
+    black: 6
+    sapphire: 7
+}
 
 /*================================================================
 *
@@ -71,20 +71,26 @@ read_data = (filename, container, callback) ->
             magic = $(min_lv_status[3]).text!
 
             block_range = $(min_lv_status[4]).text!.trim!.split ";"
+
+            # If there are two value in block or range field
             if block_range.length > 1
-                if block_range[1].startsWith \+
-                    block = "" 
-                    range = block_range[1]
+                # If the second value start with +, the first value is range
+                if block_range[1].lastIndexOf(\+, 0) === 0 or block_range[1].lastIndexOf(\-, 0) === 0
+                    block = ""
+                    range = block_range[0]
                 else
-                    block = block_range[0] 
+                    block = block_range[0]
                     range = block_range[1]
 
-            else if block_range[0].length > 2
-                block = "" 
+            # If there are one value, 
+            # the value smaller than 10 is block otherwise is range
+            else if parseInt(block_range[0]) > 10
+                block = ""
                 range = block_range[0]
             else
                 block = block_range[0]
-                range = "" 
+                range = ""
+
 
             max_cost = $(min_lv_status[5]).text!
             min_cost = $(min_lv_status[6]).text!
@@ -124,7 +130,9 @@ read_data = (filename, container, callback) ->
 
             char.add_class_data class_data
 
-        container[*] = char
+        # Filter 王子 and empty data
+        if char.name and char.name != "(プレイヤー名)"
+            container[*] = char
 
     callback!
 
@@ -134,7 +142,7 @@ read_data = (filename, container, callback) ->
 *
 *================================================================*/
 
-update_rare = (rare_name, collection) ->
+update_rare = (rare_name, rare_lv, collection) ->
     rare_list = []
 
     new Promise (resolve, reject) ->
@@ -144,6 +152,7 @@ update_rare = (rare_name, collection) ->
             for char in char_list
                 if char.name == rare_item.name and rare_item.name and char
                     char.rare = rare_name
+                    char.rare_lv = rare_lv
 
         resolve rare_list
 
@@ -169,8 +178,11 @@ for char in range_list
 
 
 # Read rare data and merge that
-tasks = for rare_name in rare_name_list
-            update_rare(rare_name, char_list)
+tasks = for rare_name, rare_lv of rare_name_list
+            update_rare(rare_name, rare_lv, char_list)
+
+# Wait all rare data merge finished
+(value) <- Promise.all(tasks).then
 
 # Save char to json file
 (err) <- fs.writeFile \sennen.json, JSON.stringify char_list, "utf-8"

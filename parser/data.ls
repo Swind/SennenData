@@ -30,6 +30,7 @@ class Char
         @class_type = ""
         @type = ""
         @rare = ""
+        @rare_lv = 0
         @img = ""
 
         @class_list = []
