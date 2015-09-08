@@ -31,6 +31,9 @@ onBuild = (done)->
 *
 ============================================================*/
 gulp.task \frontend-build, (done)->
+    config = frontendConfig.production
+    config.plugins[*] = new webpack.optimize.UglifyJsPlugin!
+
     webpack(frontendConfig.production).run onBuild done
 
 gulp.task \dev-server, (done)->

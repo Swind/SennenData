@@ -64,7 +64,7 @@ class-char-list = React.createClass do
 
         return table {className: mdl-table-style, id: "char-list-table"},
 
-                 tr {},
+                 tr {id: "char-table-header"},
                    for th-value, i in th-list
                      th {key: i}, th-value
 

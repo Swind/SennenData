@@ -63,16 +63,16 @@ frontendDevConfig = {
 
 addVendor \js, \lokijs, node_dir + "/lokijs/src/lokijs.js", frontendDevConfig
 
-frontendConfig = ! -> 
-    config = ^^frontendDevConfig
-    #config.plugins[*] = new webpack.optimize.UglifyJsPlugin!
-    #delete config[\devtool]
-    #delete config[\debug]
+frontendConfig = ! ->
+    config = {} <<< frontendDevConfig
+
+    delete config[\devtool]
+    delete config[\debug]
+
     return config
 
 
 module.exports = {
     dev: frontendDevConfig
-    production: frontendConfig! 
+    production: frontendConfig!
 }
-
