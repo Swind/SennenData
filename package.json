@@ -29,7 +29,9 @@
     "react-hot-loader": "",
     "style-loader": "",
     "sass-loader": "",
-    "css-loader": ""
+    "css-loader": "",
+    "react-redux": "",
+    "redux-devtools": ""
   },
   "dependencies": {
     "ws": "",
@@ -38,6 +40,7 @@
     "lokijs":"",
     "request": "",
     "jconv": "",
-    "react": ""
+    "react": "",
+    "redux": ""
   }
 }
