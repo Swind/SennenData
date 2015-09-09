@@ -12,42 +12,66 @@ require! {
     "./views/CharListView": CharListView
 }
 
-{div, a} = React.DOM
+{div, a, header, main, span, nav} = React.DOM
 char-list-view-elem = React.createFactory CharListView
 
-class App extends Component
-    componentWillMount: !->
-      const {dispatch, melee_chars, range_chars} = @props
+class Main extends Component
+  render: ! ->
+    const {dispatch, melee_chars, range_chars} = @props
+    return div {className: "mdl-tabs mdl-js-tabs mdl-js-ripple-effect"},
+             div {className: "mdl-tabs__tab-bar"},
+                 a {href:'#melee-panel', className:'mdl-tabs__tab is-active'}, \近接型
+                 a {href:'#range-panel', className:'mdl-tabs__tab'}, \遠距離型
+             div {className: "mdl-tabs__panel is-active", id:"melee-panel"},
+               char-list-view-elem {
+                 chars: melee_chars
+                 add_filter: (id, checked) -> dispatch Action.add_melee_filter {"#id": checked}
+                 remove_filter: (id, checked) -> dispatch Action.remove_melee_filter {"#id": checked}
+                 reset_filter: (id, checked) -> dispatch Action.reset_melee_filter {"#id": checked}
+               }
+             div {className: "mdl-tabs__panel", id:"range-panel"},
+               char-list-view-elem {
+                 chars: range_chars
+                 add_filter: (id, checked) -> dispatch Action.add_range_filter {"#id": checked}
+                 remove_filter: (id, checked) -> dispatch Action.remove_range_filter {"#id": checked}
+                 reset_filter: (id, checked) -> dispatch Action.reset_range_filter {"#id": checked}
+               }
 
-      dispatch Action.reset_melee_filter!
-      dispatch Action.reset_range_filter!
+Main.propTypes = {}
+main-elem = React.createFactory Main 
 
-    render: ! ->
-      const {dispatch, melee_chars, range_chars} = @props
+class Body extends Component
+  componentWillMount: !->
+    const {dispatch, melee_chars, range_chars} = @props
 
-      return div {className: "mdl-tabs mdl-js-tabs mdl-js-ripple-effect"},
-                  div {className: "mdl-tabs__tab-bar"},
-                      a {href:'#melee-panel', className:'mdl-tabs__tab is-active'}, \近接型
-                      a {href:'#range-panel', className:'mdl-tabs__tab'}, \遠距離型
-                  div {className: "mdl-tabs__panel is-active", id:"melee-panel"},
-                    char-list-view-elem {
-                      chars: melee_chars
-                      add_filter: Action.add_melee_filter
-                      remove_filter: Action.remove_melee_filter
-                      reset_filter: Action.reset_melee_filter
-                    }
-                  div {className: "mdl-tabs__panel", id:"range-panel"},
-                    char-list-view-elem {
-                      chars: range_chars
-                      add_filter: Action.add_range_filter
-                      remove_filter: Action.remove_range_filter
-                      reset_filter: Action.reset_range_filter
-                    }
+    dispatch Action.reset_melee_filter!
+    dispatch Action.reset_range_filter!
 
-App.propTypes = {}
+  render: !->
+    const {dispatch, melee_chars, range_chars} = @props
 
+    return div {className: "mdl-layout mdl-js-layout"},
 
-app-elem = React.createFactory connect((state)->state)(App)
+             # Header
+             header {className: "mdl-layout__header"},
+               div {className: "mdl-layout__header-row"}
+
+             # Sidebar
+             div {className: "mdl-layout__drawer"},
+               span {className: "mdl-layout-title"},
+                 \千年戦争ーアイギス
+               nav {className: "mdl-navigation", id:"sidebar"}
+
+             # Main content
+             main {className:"mdl-layout__content" id:"main"},
+               main-elem {
+                 dispatch
+                 melee_chars
+                 range_chars
+               }
+
+Body.propTypes = {}
+body-elem = React.createFactory connect((state)->state)(Body)
 
 /*==================================================================================
 *
@@ -55,8 +79,7 @@ app-elem = React.createFactory connect((state)->state)(App)
 *
 *=================================================================================*/
 store = createStore Reducer
-root-elem = document.getElementById "main"
+root-elem = document.getElementById "body"
 
-provider-elem = React.createElement Provider, {store: store}, app-elem 
-
-React.render provider-elem, root-elem
+provider-elem = React.createElement Provider, {store: store}, body-elem
+React.render (div {}, [provider-elem]), root-elem

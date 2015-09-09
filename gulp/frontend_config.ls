@@ -52,7 +52,7 @@ frontendDevConfig = {
     plugins: [
         new HtmlWebpackPlugin {
             template: "web/index.html"
-            inject: true
+            inject: true 
         }
         new webpack.optimize.CommonsChunkPlugin "vendors", "vendors.js"
         new webpack.HotModuleReplacementPlugin!

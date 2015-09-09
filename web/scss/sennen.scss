@@ -1,5 +1,7 @@
 td#char-name {
-    width: 10%
+    width: 10%;
+    word-wrap : break-word;
+    overflow-wrap : break-word;
 }
 
 td#char-rare {

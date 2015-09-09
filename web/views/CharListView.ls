@@ -2,7 +2,7 @@ require! {
     "react": React
 }
 
-{div, table, thead, tbody, th, tr, td} = React.DOM
+{div, table, thead, tbody, th, tr, td, label, input, span} = React.DOM
 
 mdl-table-style = "mdl-data-table mdl-js-data-table"
 
@@ -80,8 +80,24 @@ class-char-list-elem = React.createFactory class-char-list
 *
 *===================================================*/
 module.exports = CharList = React.createClass do
+  handleChange: (event) ->
+    id = event.target.id
+    checked = event.target.checked
+    if checked
+      @props.add_filter id, checked
+    else
+      @props.remove_filter id, checked
+
   render: ! ->
       return div {className: "mdl-grid"},
-                 div {className: "mdl-cell mdl-cell--12-col"},
-                   for class_name, class_char_list of @props.chars.class_map 
-                       class-char-list-elem {key: class_name, class_name: class_name, class_char_list: class_char_list}
+
+               div {className: "mdl-cell mdl-cell--2-col"},
+                 for class_type, checked of @props.chars.class_types_map
+                   label {key: class_type, className: "mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect", htmlFor: class_type},
+                     input {type: "checkbox", id: class_type, className:"mdl-checkbox__input", checked: checked, onChange: @handleChange}
+                     span {className: "mdl-checkbox__label"},
+                       class_type
+
+               div {className: "mdl-cell mdl-cell--10-col"},
+                 for class_name, class_char_list of @props.chars.class_map 
+                     class-char-list-elem {key: class_name, class_name: class_name, class_char_list: class_char_list}

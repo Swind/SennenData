@@ -35,18 +35,21 @@ reset_filter = (action_type, char_type, no_use=null) -->
 update_filter = (action_type, char_type, removed, filter_map) -->
 
   filter_list = []
-  for filter, enable in filter_map
+  for filter, enable of filter_map
     if filter !== removed
       filter_list[*] = filter
 
+  char_list = char_db.chain!
+              .find({type: char_type})
+              .find({
+                  class_type: {
+                    "$in": filter_list
+                  }
+              }).data!
+
   return {
     type: action_type
-    char_list: char_db.find {
-      type: char_type
-      class_type: {
-        $in: filter_list
-      }
-    }
+    char_list: char_list
   }
 
 add_melee_filter = update_filter ADD_MELEE_CHARS, \melee, false
