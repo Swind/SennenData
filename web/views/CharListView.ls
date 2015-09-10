@@ -62,7 +62,12 @@ class-char-list = React.createClass do
         name = @props.class_name
         list = @props.class_char_list
 
-        return table {className: mdl-table-style, id: "char-list-table"},
+        if not @props.display
+          display = "none" 
+        else
+          display = ""
+
+        return table {className: mdl-table-style, id: "char-list-table", style:{display: display}},
 
                  tr {id: "char-table-header"},
                    for th-value, i in th-list
@@ -99,5 +104,11 @@ module.exports = CharList = React.createClass do
                        class_type
 
                div {className: "mdl-cell mdl-cell--10-col"},
-                 for class_name, class_char_list of @props.chars.class_map 
-                     class-char-list-elem {key: class_name, class_name: class_name, class_char_list: class_char_list}
+                 for class_name, class_char_list of @props.chars.class_map
+                     class-char-list-elem {
+                       key: class_name
+                       class_name: class_name
+                       class_char_list: class_char_list
+                       display: @props.chars.class_types_map[class_name]
+                     }
+

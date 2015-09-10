@@ -46,8 +46,8 @@ create_filters = (ADD_CASE_CASE, REMOVE_CASE_CASE, RESET_CASE_CASE,
       class_types_map[class_type] = true
 
     return {
-      class_map: {} <<< state.class_map <<< new_class_map
-      char_list: state.char_list.concat action.char_list
+      class_map: state.class_map
+      char_list: state.char_list
       class_types_map: {} <<< state.class_types_map <<< class_types_map
     }
 
@@ -66,8 +66,8 @@ create_filters = (ADD_CASE_CASE, REMOVE_CASE_CASE, RESET_CASE_CASE,
       class_types_map[char.class_type] = false
 
     return {
-      class_map: new_class_map
-      char_list: new_char_list
+      class_map: state.class_map 
+      char_list: state.char_list 
       class_types_map: class_types_map
     }
 
