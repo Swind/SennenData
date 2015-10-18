@@ -23942,13 +23942,13 @@ webpackJsonp([0],[
 					"name": "ソルジャー",
 					"min": {
 						"lv": 1,
-						"hp": 960,
+						"hp": 995,
 						"at": 198,
 						"def": 135
 					},
 					"max": {
 						"lv": 50,
-						"hp": 1360,
+						"hp": 1410,
 						"at": 306,
 						"def": 201
 					},
@@ -23971,13 +23971,13 @@ webpackJsonp([0],[
 					"name": "ソルジャーチーフ",
 					"min": {
 						"lv": 1,
-						"hp": 1367,
+						"hp": 1417,
 						"at": 307,
 						"def": 202
 					},
 					"max": {
 						"lv": 80,
-						"hp": 1904,
+						"hp": 1974,
 						"at": 416,
 						"def": 288
 					},
@@ -24000,13 +24000,13 @@ webpackJsonp([0],[
 					"name": "ソルジャーエリート",
 					"min": {
 						"lv": 1,
-						"hp": 1574,
+						"hp": 1631,
 						"at": 351,
 						"def": 267
 					},
 					"max": {
 						"lv": 99,
-						"hp": 2516,
+						"hp": 2609,
 						"at": 494,
 						"def": 342
 					},
@@ -25397,10 +25397,10 @@ webpackJsonp([0],[
 				{
 					"name": "ワルキューレ",
 					"min": {
-						"lv": 5,
-						"hp": 767,
-						"at": 213,
-						"def": 153
+						"lv": 1,
+						"hp": 741,
+						"at": 206,
+						"def": 147
 					},
 					"max": {
 						"lv": 50,
@@ -25877,7 +25877,7 @@ webpackJsonp([0],[
 					},
 					"skill_1": "暗殺I",
 					"skill_2": "ゴールドゲット！",
-					"skill_3": ""
+					"skill_3": "超暗殺"
 				}
 			]
 		},
@@ -25974,7 +25974,7 @@ webpackJsonp([0],[
 					},
 					"skill_1": "回復III",
 					"skill_2": "トレジャーハント【宝石】",
-					"skill_3": ""
+					"skill_3": "死の予告状"
 				}
 			]
 		},
@@ -26071,7 +26071,7 @@ webpackJsonp([0],[
 					},
 					"skill_1": "暗殺II",
 					"skill_2": "貫通攻撃",
-					"skill_3": ""
+					"skill_3": "我流操槍術・天輪撃"
 				}
 			]
 		},
@@ -26168,7 +26168,7 @@ webpackJsonp([0],[
 					},
 					"skill_1": "呪われた血脈",
 					"skill_2": "体力アップ",
-					"skill_3": ""
+					"skill_3": "呪血の目覚め"
 				}
 			]
 		},
@@ -26266,6 +26266,45 @@ webpackJsonp([0],[
 					"skill_1": "暗殺III",
 					"skill_2": "極・非情の刃",
 					"skill_3": "死の旋風"
+				}
+			]
+		},
+		{
+			"name": "ルイーズ",
+			"class_type": "プリンセス",
+			"type": "melee",
+			"rare": "",
+			"rare_lv": 0,
+			"img": "https://i.gyazo.com/b193b88237fd64d1126dd912ab7cad78.png",
+			"class_list": [
+				{
+					"name": "プリンセス",
+					"min": {
+						"lv": 1,
+						"hp": 709,
+						"at": 203,
+						"def": 137
+					},
+					"max": {
+						"lv": 40,
+						"hp": 1050,
+						"at": 300,
+						"def": 203
+					},
+					"resist": 10,
+					"block": 1,
+					"range": 0,
+					"max_cost": 15,
+					"min_cost": 0,
+					"bonus": {
+						"hp": 0,
+						"at": 0,
+						"def": 0,
+						"stun": 0
+					},
+					"skill_1": "",
+					"skill_2": "",
+					"skill_3": ""
 				}
 			]
 		},
@@ -26806,7 +26845,7 @@ webpackJsonp([0],[
 						"at": 514,
 						"def": 310
 					},
-					"resist": 0,
+					"resist": 10,
 					"block": 1,
 					"range": 0,
 					"max_cost": 19,
@@ -26835,7 +26874,7 @@ webpackJsonp([0],[
 						"at": 623,
 						"def": 346
 					},
-					"resist": 0,
+					"resist": 10,
 					"block": 1,
 					"range": 0,
 					"max_cost": 19,
@@ -26874,7 +26913,7 @@ webpackJsonp([0],[
 						"at": 588,
 						"def": 358
 					},
-					"resist": 0,
+					"resist": 10,
 					"block": 1,
 					"range": 0,
 					"max_cost": 23,
@@ -26903,7 +26942,7 @@ webpackJsonp([0],[
 						"at": 686,
 						"def": 377
 					},
-					"resist": 0,
+					"resist": 10,
 					"block": 1,
 					"range": 0,
 					"max_cost": 23,
@@ -26932,14 +26971,14 @@ webpackJsonp([0],[
 					"name": "下級バンデット",
 					"min": {
 						"lv": 1,
-						"hp": 1010,
+						"hp": 1013,
 						"at": 253,
 						"def": 101
 					},
 					"max": {
 						"lv": 30,
-						"hp": 1300,
-						"at": 340,
+						"hp": 1390,
+						"at": 352,
 						"def": 130
 					},
 					"resist": 0,
@@ -26971,14 +27010,14 @@ webpackJsonp([0],[
 					"name": "下級バンデット",
 					"min": {
 						"lv": 1,
-						"hp": 1111,
+						"hp": 1114,
 						"at": 228,
 						"def": 101
 					},
 					"max": {
 						"lv": 30,
-						"hp": 1430,
-						"at": 306,
+						"hp": 1529,
+						"at": 317,
 						"def": 130
 					},
 					"resist": 0,
@@ -27010,14 +27049,14 @@ webpackJsonp([0],[
 					"name": "下級バンデット",
 					"min": {
 						"lv": 1,
-						"hp": 1040,
+						"hp": 1043,
 						"at": 271,
 						"def": 101
 					},
 					"max": {
 						"lv": 40,
-						"hp": 1442,
-						"at": 396,
+						"hp": 1566,
+						"at": 413,
 						"def": 140
 					},
 					"resist": 0,
@@ -27049,7 +27088,7 @@ webpackJsonp([0],[
 					"name": "バンデット",
 					"min": {
 						"lv": 1,
-						"hp": 1101,
+						"hp": 1104,
 						"at": 301,
 						"def": 103
 					},
@@ -27078,14 +27117,14 @@ webpackJsonp([0],[
 					"name": "バーサーカー",
 					"min": {
 						"lv": 1,
-						"hp": 1642,
-						"at": 478,
+						"hp": 1806,
+						"at": 502,
 						"def": 154
 					},
 					"max": {
 						"lv": 50,
-						"hp": 1976,
-						"at": 595,
+						"hp": 2173,
+						"at": 619,
 						"def": 185
 					},
 					"resist": 0,
@@ -27117,7 +27156,7 @@ webpackJsonp([0],[
 					"name": "バンデット",
 					"min": {
 						"lv": 1,
-						"hp": 1172,
+						"hp": 1175,
 						"at": 281,
 						"def": 104
 					},
@@ -27152,8 +27191,8 @@ webpackJsonp([0],[
 					},
 					"max": {
 						"lv": 50,
-						"hp": 2103,
-						"at": 555,
+						"hp": 2313,
+						"at": 577,
 						"def": 186
 					},
 					"resist": 0,
@@ -27185,14 +27224,14 @@ webpackJsonp([0],[
 					"name": "バンデット",
 					"min": {
 						"lv": 1,
-						"hp": 1263,
+						"hp": 1266,
 						"at": 288,
 						"def": 112
 					},
 					"max": {
 						"lv": 50,
-						"hp": 1875,
-						"at": 456,
+						"hp": 2063,
+						"at": 478,
 						"def": 167
 					},
 					"resist": 0,
@@ -27214,14 +27253,14 @@ webpackJsonp([0],[
 					"name": "バーサーカー",
 					"min": {
 						"lv": 1,
-						"hp": 1883,
-						"at": 458,
+						"hp": 2071,
+						"at": 481,
 						"def": 168
 					},
 					"max": {
 						"lv": 60,
-						"hp": 2344,
-						"at": 593,
+						"hp": 2579,
+						"at": 616,
 						"def": 209
 					},
 					"resist": 0,
@@ -27243,8 +27282,8 @@ webpackJsonp([0],[
 					"name": "デストロイヤー",
 					"min": {
 						"lv": 1,
-						"hp": 2136,
-						"at": 571,
+						"hp": 2389,
+						"at": 584,
 						"def": 201
 					},
 					"max": {
@@ -27282,7 +27321,7 @@ webpackJsonp([0],[
 					"name": "バンデット",
 					"min": {
 						"lv": 1,
-						"hp": 1313,
+						"hp": 1317,
 						"at": 329,
 						"def": 111
 					},
@@ -27346,8 +27385,8 @@ webpackJsonp([0],[
 					},
 					"max": {
 						"lv": 90,
-						"hp": 3273,
-						"at": 803,
+						"hp": 3770,
+						"at": 840,
 						"def": 208
 					},
 					"resist": 0,
@@ -27379,14 +27418,14 @@ webpackJsonp([0],[
 					"name": "バンデット",
 					"min": {
 						"lv": 1,
-						"hp": 1364,
+						"hp": 1368,
 						"at": 278,
 						"def": 126
 					},
 					"max": {
 						"lv": 50,
-						"hp": 2025,
-						"at": 440,
+						"hp": 2228,
+						"at": 462,
 						"def": 188
 					},
 					"resist": 10,
@@ -27414,8 +27453,8 @@ webpackJsonp([0],[
 					},
 					"max": {
 						"lv": 70,
-						"hp": 2616,
-						"at": 594,
+						"hp": 2877,
+						"at": 616,
 						"def": 243
 					},
 					"resist": 10,
@@ -27437,14 +27476,14 @@ webpackJsonp([0],[
 					"name": "デストロイヤー",
 					"min": {
 						"lv": 1,
-						"hp": 2307,
-						"at": 551,
+						"hp": 2580,
+						"at": 563,
 						"def": 226
 					},
 					"max": {
 						"lv": 90,
-						"hp": 3399,
-						"at": 680,
+						"hp": 3915,
+						"at": 711,
 						"def": 236
 					},
 					"resist": 10,
@@ -27476,7 +27515,7 @@ webpackJsonp([0],[
 					"name": "バンデット",
 					"min": {
 						"lv": 1,
-						"hp": 1252,
+						"hp": 1256,
 						"at": 283,
 						"def": 130
 					},
@@ -27511,8 +27550,8 @@ webpackJsonp([0],[
 					},
 					"max": {
 						"lv": 70,
-						"hp": 2403,
-						"at": 605,
+						"hp": 2642,
+						"at": 627,
 						"def": 250
 					},
 					"resist": 0,
@@ -27534,14 +27573,14 @@ webpackJsonp([0],[
 					"name": "デストロイヤー",
 					"min": {
 						"lv": 1,
-						"hp": 2119,
-						"at": 561,
+						"hp": 2370,
+						"at": 573,
 						"def": 233
 					},
 					"max": {
 						"lv": 90,
-						"hp": 3122,
-						"at": 692,
+						"hp": 3596,
+						"at": 724,
 						"def": 244
 					},
 					"resist": 0,
@@ -27573,14 +27612,14 @@ webpackJsonp([0],[
 					"name": "バンデット",
 					"min": {
 						"lv": 5,
-						"hp": 1250,
-						"at": 318,
+						"hp": 1267,
+						"at": 320,
 						"def": 132
 					},
 					"max": {
 						"lv": 50,
-						"hp": 1785,
-						"at": 480,
+						"hp": 1964,
+						"at": 504,
 						"def": 189
 					},
 					"resist": 0,
@@ -27608,8 +27647,8 @@ webpackJsonp([0],[
 					},
 					"max": {
 						"lv": 70,
-						"hp": 2306,
-						"at": 648,
+						"hp": 2536,
+						"at": 672,
 						"def": 244
 					},
 					"resist": 0,
@@ -27631,8 +27670,8 @@ webpackJsonp([0],[
 					"name": "デストロイヤー",
 					"min": {
 						"lv": 1,
-						"hp": 2034,
-						"at": 601,
+						"hp": 2274,
+						"at": 614,
 						"def": 228
 					},
 					"max": {
@@ -27670,14 +27709,14 @@ webpackJsonp([0],[
 					"name": "バンデット",
 					"min": {
 						"lv": 1,
-						"hp": 1353,
+						"hp": 1357,
 						"at": 354,
 						"def": 127
 					},
 					"max": {
 						"lv": 50,
-						"hp": 2010,
-						"at": 560,
+						"hp": 2211,
+						"at": 588,
 						"def": 189
 					},
 					"resist": 0,
@@ -27686,7 +27725,7 @@ webpackJsonp([0],[
 					"max_cost": 17,
 					"min_cost": 14,
 					"bonus": {
-						"hp": 90,
+						"hp": 98,
 						"at": 60,
 						"def": 0,
 						"stun": 0
@@ -27699,8 +27738,8 @@ webpackJsonp([0],[
 					"name": "バーサーカー",
 					"min": {
 						"lv": 1,
-						"hp": 2018,
-						"at": 563,
+						"hp": 2220,
+						"at": 591,
 						"def": 190
 					},
 					"max": {
@@ -27715,7 +27754,7 @@ webpackJsonp([0],[
 					"max_cost": 20,
 					"min_cost": 17,
 					"bonus": {
-						"hp": 216,
+						"hp": 234,
 						"at": 144,
 						"def": 0,
 						"stun": 0
@@ -27734,8 +27773,8 @@ webpackJsonp([0],[
 					},
 					"max": {
 						"lv": 99,
-						"hp": 3484,
-						"at": 882,
+						"hp": 4020,
+						"at": 924,
 						"def": 239
 					},
 					"resist": 0,
@@ -27744,7 +27783,7 @@ webpackJsonp([0],[
 					"max_cost": 20,
 					"min_cost": 17,
 					"bonus": {
-						"hp": 216,
+						"hp": 234,
 						"at": 144,
 						"def": 0,
 						"stun": 0
@@ -28512,8 +28551,8 @@ webpackJsonp([0],[
 					"max": {
 						"lv": 70,
 						"hp": 2048,
-						"at": 336,
-						"def": 314
+						"at": 353,
+						"def": 327
 					},
 					"resist": 0,
 					"block": 2,
@@ -29487,7 +29526,7 @@ webpackJsonp([0],[
 						"def": 0,
 						"stun": 0
 					},
-					"skill_1": "リトルウィング",
+					"skill_1": "リトルウイング",
 					"skill_2": "",
 					"skill_3": ""
 				},
@@ -29545,9 +29584,9 @@ webpackJsonp([0],[
 						"def": 0,
 						"stun": 0
 					},
-					"skill_1": "リトルウィング",
+					"skill_1": "リトルウイング",
 					"skill_2": "体力アップ",
-					"skill_3": ""
+					"skill_3": "クイックウイング"
 				}
 			]
 		},
@@ -29633,7 +29672,7 @@ webpackJsonp([0],[
 					},
 					"resist": 15,
 					"block": 1,
-					"range": 0,
+					"range": 180,
 					"max_cost": 21,
 					"min_cost": 18,
 					"bonus": {
@@ -29642,9 +29681,9 @@ webpackJsonp([0],[
 						"def": 48,
 						"stun": 0
 					},
-					"skill_1": "ペガサスウィング",
+					"skill_1": "ペガサスウイング",
 					"skill_2": "必殺の一撃",
-					"skill_3": ""
+					"skill_3": "ワールウィンド"
 				}
 			]
 		},
@@ -29741,7 +29780,7 @@ webpackJsonp([0],[
 					},
 					"skill_1": "イカロスウイング",
 					"skill_2": "ペガサスライダー;攻撃アップ",
-					"skill_3": ""
+					"skill_3": "ダイダロスウイング;ウイングチャージ"
 				}
 			]
 		},
@@ -29836,7 +29875,7 @@ webpackJsonp([0],[
 						"def": 0,
 						"stun": 0
 					},
-					"skill_1": "ペガサスウィング",
+					"skill_1": "ペガサスウイング",
 					"skill_2": "導きの風",
 					"skill_3": "撃滅の天翼"
 				}
@@ -30145,13 +30184,13 @@ webpackJsonp([0],[
 					"name": "アベンジャー",
 					"min": {
 						"lv": 1,
-						"hp": 758,
+						"hp": 865,
 						"at": 340,
 						"def": 202
 					},
 					"max": {
 						"lv": 60,
-						"hp": 1231,
+						"hp": 1378,
 						"at": 510,
 						"def": 271
 					},
@@ -30174,7 +30213,7 @@ webpackJsonp([0],[
 					"name": "デスアベンジャー",
 					"min": {
 						"lv": 1,
-						"hp": 1134,
+						"hp": 1349,
 						"at": 521,
 						"def": 255
 					},
@@ -30213,13 +30252,13 @@ webpackJsonp([0],[
 					"name": "アベンジャー",
 					"min": {
 						"lv": 1,
-						"hp": 814,
+						"hp": 929,
 						"at": 302,
 						"def": 197
 					},
 					"max": {
 						"lv": 60,
-						"hp": 1323,
+						"hp": 1481,
 						"at": 454,
 						"def": 265
 					},
@@ -30242,13 +30281,13 @@ webpackJsonp([0],[
 					"name": "デスアベンジャー",
 					"min": {
 						"lv": 1,
-						"hp": 1219,
+						"hp": 1450,
 						"at": 463,
 						"def": 248
 					},
 					"max": {
 						"lv": 80,
-						"hp": 2137,
+						"hp": 2460,
 						"at": 540,
 						"def": 317
 					},
@@ -30310,13 +30349,13 @@ webpackJsonp([0],[
 					"name": "デスアベンジャー",
 					"min": {
 						"lv": 1,
-						"hp": 1272,
+						"hp": 1513,
 						"at": 483,
 						"def": 259
 					},
 					"max": {
 						"lv": 90,
-						"hp": 2351,
+						"hp": 2700,
 						"at": 573,
 						"def": 340
 					},
@@ -30355,9 +30394,9 @@ webpackJsonp([0],[
 					},
 					"max": {
 						"lv": 50,
-						"hp": 990,
+						"hp": 989,
 						"at": 264,
-						"def": 154
+						"def": 165
 					},
 					"resist": 0,
 					"block": 2,
@@ -30380,13 +30419,13 @@ webpackJsonp([0],[
 						"lv": 1,
 						"hp": 996,
 						"at": 265,
-						"def": 155
+						"def": 166
 					},
 					"max": {
 						"lv": 50,
 						"hp": 1265,
 						"at": 337,
-						"def": 182
+						"def": 199
 					},
 					"resist": 0,
 					"block": 2,
@@ -30425,7 +30464,7 @@ webpackJsonp([0],[
 						"lv": 50,
 						"hp": 1071,
 						"at": 290,
-						"def": 140
+						"def": 150
 					},
 					"resist": 0,
 					"block": 2,
@@ -30448,13 +30487,13 @@ webpackJsonp([0],[
 						"lv": 1,
 						"hp": 1077,
 						"at": 292,
-						"def": 141
+						"def": 151
 					},
 					"max": {
 						"lv": 60,
 						"hp": 1428,
 						"at": 386,
-						"def": 170
+						"def": 188
 					},
 					"resist": 0,
 					"block": 2,
@@ -30477,13 +30516,13 @@ webpackJsonp([0],[
 						"lv": 1,
 						"hp": 1291,
 						"at": 358,
-						"def": 165
+						"def": 181
 					},
 					"max": {
 						"lv": 80,
 						"hp": 1775,
 						"at": 489,
-						"def": 193
+						"def": 220
 					},
 					"resist": 0,
 					"block": 2,
@@ -30545,7 +30584,7 @@ webpackJsonp([0],[
 						"lv": 1,
 						"hp": 1086,
 						"at": 265,
-						"def": 155
+						"def": 166
 					},
 					"max": {
 						"lv": 60,
@@ -30580,7 +30619,7 @@ webpackJsonp([0],[
 						"lv": 80,
 						"hp": 1790,
 						"at": 444,
-						"def": 212
+						"def": 242
 					},
 					"resist": 0,
 					"block": 2,
@@ -30627,8 +30666,8 @@ webpackJsonp([0],[
 					"max_cost": 11,
 					"min_cost": 8,
 					"bonus": {
-						"hp": 0,
-						"at": 58,
+						"hp": 83,
+						"at": 50,
 						"def": 0,
 						"stun": 0
 					},
@@ -30640,9 +30679,9 @@ webpackJsonp([0],[
 					"name": "マスターモンク",
 					"min": {
 						"lv": 1,
-						"hp": 1103,
+						"hp": 1104,
 						"at": 328,
-						"def": 158
+						"def": 169
 					},
 					"max": {
 						"lv": 70,
@@ -30656,8 +30695,8 @@ webpackJsonp([0],[
 					"max_cost": 14,
 					"min_cost": 11,
 					"bonus": {
-						"hp": 0,
-						"at": 138,
+						"hp": 198,
+						"at": 120,
 						"def": 0,
 						"stun": 0
 					},
@@ -30671,13 +30710,13 @@ webpackJsonp([0],[
 						"lv": 1,
 						"hp": 1324,
 						"at": 403,
-						"def": 185
+						"def": 203
 					},
 					"max": {
 						"lv": 90,
 						"hp": 1884,
 						"at": 568,
-						"def": 221
+						"def": 252
 					},
 					"resist": 0,
 					"block": 2,
@@ -30685,8 +30724,8 @@ webpackJsonp([0],[
 					"max_cost": 14,
 					"min_cost": 11,
 					"bonus": {
-						"hp": 0,
-						"at": 138,
+						"hp": 198,
+						"at": 120,
 						"def": 0,
 						"stun": 0
 					},
@@ -30716,7 +30755,7 @@ webpackJsonp([0],[
 						"lv": 50,
 						"hp": 1125,
 						"at": 288,
-						"def": 168
+						"def": 180
 					},
 					"resist": 0,
 					"block": 2,
@@ -30739,7 +30778,7 @@ webpackJsonp([0],[
 						"lv": 1,
 						"hp": 1131,
 						"at": 289,
-						"def": 169
+						"def": 181
 					},
 					"max": {
 						"lv": 70,
@@ -30774,7 +30813,7 @@ webpackJsonp([0],[
 						"lv": 90,
 						"hp": 1930,
 						"at": 502,
-						"def": 236
+						"def": 270
 					},
 					"resist": 0,
 					"block": 2,
@@ -30790,6 +30829,103 @@ webpackJsonp([0],[
 					"skill_1": "気功術",
 					"skill_2": "モンクの攻撃力アップ",
 					"skill_3": "気功螺旋破"
+				}
+			]
+		},
+		{
+			"name": "武王姫アリス",
+			"class_type": "モンク",
+			"type": "melee",
+			"rare": "ブラック",
+			"rare_lv": 6,
+			"img": "http://gyazo.com/39b292d36de186a20f285e18eb39ab12.png",
+			"class_list": [
+				{
+					"name": "モンク",
+					"min": {
+						"lv": 1,
+						"hp": 879,
+						"at": 219,
+						"def": 109
+					},
+					"max": {
+						"lv": 50,
+						"hp": 1305,
+						"at": 324,
+						"def": 180
+					},
+					"resist": 0,
+					"block": 2,
+					"range": 0,
+					"max_cost": 12,
+					"min_cost": 9,
+					"bonus": {
+						"hp": 0,
+						"at": 72,
+						"def": 30,
+						"stun": 0
+					},
+					"skill_1": "硬気功",
+					"skill_2": "旋風脚",
+					"skill_3": ""
+				},
+				{
+					"name": "マスターモンク",
+					"min": {
+						"lv": 1,
+						"hp": 1312,
+						"at": 325,
+						"def": 181
+					},
+					"max": {
+						"lv": 80,
+						"hp": 1885,
+						"at": 466,
+						"def": 240
+					},
+					"resist": 0,
+					"block": 2,
+					"range": 0,
+					"max_cost": 15,
+					"min_cost": 12,
+					"bonus": {
+						"hp": 0,
+						"at": 173,
+						"def": 72,
+						"stun": 0
+					},
+					"skill_1": "",
+					"skill_2": "",
+					"skill_3": ""
+				},
+				{
+					"name": "拳聖",
+					"min": {
+						"lv": 1,
+						"hp": 1573,
+						"at": 400,
+						"def": 217
+					},
+					"max": {
+						"lv": 99,
+						"hp": 2306,
+						"at": 581,
+						"def": 276
+					},
+					"resist": 0,
+					"block": 2,
+					"range": 0,
+					"max_cost": 15,
+					"min_cost": 12,
+					"bonus": {
+						"hp": 0,
+						"at": 173,
+						"def": 72,
+						"stun": 0
+					},
+					"skill_1": "硬気功",
+					"skill_2": "獣王爪大旋風",
+					"skill_3": "剛力活丹功"
 				}
 			]
 		},
@@ -31359,7 +31495,7 @@ webpackJsonp([0],[
 					"min": {
 						"lv": 1,
 						"hp": 1109,
-						"at": 289,
+						"at": 290,
 						"def": 201
 					},
 					"max": {
@@ -33553,7 +33689,7 @@ webpackJsonp([0],[
 					},
 					"resist": 0,
 					"block": 1,
-					"range": 250,
+					"range": 260,
 					"max_cost": 13,
 					"min_cost": 10,
 					"bonus": {
@@ -33582,7 +33718,7 @@ webpackJsonp([0],[
 					},
 					"resist": 0,
 					"block": 1,
-					"range": 250,
+					"range": 260,
 					"max_cost": 16,
 					"min_cost": 13,
 					"bonus": {
@@ -33611,7 +33747,7 @@ webpackJsonp([0],[
 					},
 					"resist": 0,
 					"block": 1,
-					"range": 250,
+					"range": 260,
 					"max_cost": 16,
 					"min_cost": 13,
 					"bonus": {
@@ -33650,7 +33786,7 @@ webpackJsonp([0],[
 					},
 					"resist": 0,
 					"block": 1,
-					"range": 250,
+					"range": 260,
 					"max_cost": 13,
 					"min_cost": 10,
 					"bonus": {
@@ -33679,7 +33815,7 @@ webpackJsonp([0],[
 					},
 					"resist": 0,
 					"block": 1,
-					"range": 250,
+					"range": 260,
 					"max_cost": 16,
 					"min_cost": 13,
 					"bonus": {
@@ -33708,7 +33844,7 @@ webpackJsonp([0],[
 					},
 					"resist": 0,
 					"block": 1,
-					"range": 250,
+					"range": 260,
 					"max_cost": 16,
 					"min_cost": 13,
 					"bonus": {
@@ -33747,7 +33883,7 @@ webpackJsonp([0],[
 					},
 					"resist": 0,
 					"block": 1,
-					"range": 250,
+					"range": 260,
 					"max_cost": 14,
 					"min_cost": 11,
 					"bonus": {
@@ -33776,7 +33912,7 @@ webpackJsonp([0],[
 					},
 					"resist": 0,
 					"block": 1,
-					"range": 250,
+					"range": 260,
 					"max_cost": 17,
 					"min_cost": 14,
 					"bonus": {
@@ -33805,7 +33941,7 @@ webpackJsonp([0],[
 					},
 					"resist": 0,
 					"block": 1,
-					"range": 250,
+					"range": 260,
 					"max_cost": 17,
 					"min_cost": 14,
 					"bonus": {
@@ -33817,6 +33953,74 @@ webpackJsonp([0],[
 					"skill_1": "クアドラショット",
 					"skill_2": "疾風の号令",
 					"skill_3": "影月七連矢"
+				}
+			]
+		},
+		{
+			"name": "術士女官シャーリー",
+			"class_type": "メイド",
+			"type": "melee",
+			"rare": "プラチナ",
+			"rare_lv": 5,
+			"img": "http://gyazo.com/1f819f14e2d9d9d2982f9f606bba49a2.png",
+			"class_list": [
+				{
+					"name": "メイド",
+					"min": {
+						"lv": 10,
+						"hp": 954,
+						"at": 233,
+						"def": 131
+					},
+					"max": {
+						"lv": 70,
+						"hp": 1423,
+						"at": 300,
+						"def": 225
+					},
+					"resist": 10,
+					"block": 1,
+					"range": 0,
+					"max_cost": 16,
+					"min_cost": 13,
+					"bonus": {
+						"hp": 276,
+						"at": 84,
+						"def": 0,
+						"stun": 0
+					},
+					"skill_1": "雷牙",
+					"skill_2": "侍女の忠誠;（術士）",
+					"skill_3": ""
+				},
+				{
+					"name": "メイド長",
+					"min": {
+						"lv": 1,
+						"hp": 1318,
+						"at": 274,
+						"def": 208
+					},
+					"max": {
+						"lv": 90,
+						"hp": 1768,
+						"at": 356,
+						"def": 281
+					},
+					"resist": 10,
+					"block": 1,
+					"range": 0,
+					"max_cost": 16,
+					"min_cost": 13,
+					"bonus": {
+						"hp": 276,
+						"at": 84,
+						"def": 0,
+						"stun": 0
+					},
+					"skill_1": "雷牙",
+					"skill_2": "侍女の献身;（術士）",
+					"skill_3": ""
 				}
 			]
 		},
@@ -35630,7 +35834,7 @@ webpackJsonp([0],[
 						"at": 348,
 						"def": 52
 					},
-					"resist": 10,
+					"resist": 15,
 					"block": 0,
 					"range": 170,
 					"max_cost": 28,
@@ -35659,11 +35863,11 @@ webpackJsonp([0],[
 						"at": 403,
 						"def": 72
 					},
-					"resist": 10,
+					"resist": 15,
 					"block": 0,
 					"range": 240,
-					"max_cost": 33,
-					"min_cost": 30,
+					"max_cost": 31,
+					"min_cost": 28,
 					"bonus": {
 						"hp": 0,
 						"at": 48,
@@ -35698,7 +35902,7 @@ webpackJsonp([0],[
 						"at": 303,
 						"def": 56
 					},
-					"resist": 10,
+					"resist": 15,
 					"block": 0,
 					"range": 170,
 					"max_cost": 28,
@@ -35727,11 +35931,11 @@ webpackJsonp([0],[
 						"at": 350,
 						"def": 77
 					},
-					"resist": 10,
+					"resist": 15,
 					"block": 0,
 					"range": 240,
-					"max_cost": 33,
-					"min_cost": 30,
+					"max_cost": 31,
+					"min_cost": 28,
 					"bonus": {
 						"hp": 0,
 						"at": 96,
@@ -35766,7 +35970,7 @@ webpackJsonp([0],[
 						"at": 354,
 						"def": 55
 					},
-					"resist": 10,
+					"resist": 15,
 					"block": 0,
 					"range": 170,
 					"max_cost": 30,
@@ -35795,11 +35999,11 @@ webpackJsonp([0],[
 						"at": 420,
 						"def": 80
 					},
-					"resist": 10,
+					"resist": 15,
 					"block": 0,
 					"range": 240,
-					"max_cost": 35,
-					"min_cost": 32,
+					"max_cost": 33,
+					"min_cost": 30,
 					"bonus": {
 						"hp": 0,
 						"at": 54,
@@ -35824,11 +36028,11 @@ webpackJsonp([0],[
 						"at": 517,
 						"def": 98
 					},
-					"resist": 10,
+					"resist": 15,
 					"block": 0,
 					"range": 240,
-					"max_cost": 35,
-					"min_cost": 32,
+					"max_cost": 33,
+					"min_cost": 30,
 					"bonus": {
 						"hp": 0,
 						"at": 54,
@@ -35863,7 +36067,7 @@ webpackJsonp([0],[
 						"at": 366,
 						"def": 56
 					},
-					"resist": 10,
+					"resist": 15,
 					"block": 0,
 					"range": 170,
 					"max_cost": 30,
@@ -35892,11 +36096,11 @@ webpackJsonp([0],[
 						"at": 434,
 						"def": 82
 					},
-					"resist": 10,
+					"resist": 15,
 					"block": 0,
 					"range": 240,
-					"max_cost": 35,
-					"min_cost": 32,
+					"max_cost": 33,
+					"min_cost": 30,
 					"bonus": {
 						"hp": 0,
 						"at": 54,
@@ -35921,11 +36125,11 @@ webpackJsonp([0],[
 						"at": 501,
 						"def": 100
 					},
-					"resist": 10,
+					"resist": 15,
 					"block": 0,
 					"range": 240,
-					"max_cost": 35,
-					"min_cost": 32,
+					"max_cost": 33,
+					"min_cost": 30,
 					"bonus": {
 						"hp": 0,
 						"at": 54,
@@ -35960,7 +36164,7 @@ webpackJsonp([0],[
 						"at": 345,
 						"def": 55
 					},
-					"resist": 10,
+					"resist": 15,
 					"block": 0,
 					"range": 170,
 					"max_cost": 30,
@@ -35989,11 +36193,11 @@ webpackJsonp([0],[
 						"at": 409,
 						"def": 80
 					},
-					"resist": 10,
+					"resist": 15,
 					"block": 0,
 					"range": 240,
-					"max_cost": 35,
-					"min_cost": 32,
+					"max_cost": 33,
+					"min_cost": 30,
 					"bonus": {
 						"hp": 0,
 						"at": 108,
@@ -36018,11 +36222,11 @@ webpackJsonp([0],[
 						"at": 504,
 						"def": 98
 					},
-					"resist": 10,
+					"resist": 15,
 					"block": 0,
 					"range": 240,
-					"max_cost": 35,
-					"min_cost": 32,
+					"max_cost": 33,
+					"min_cost": 30,
 					"bonus": {
 						"hp": 0,
 						"at": 108,
@@ -36057,7 +36261,7 @@ webpackJsonp([0],[
 						"at": 384,
 						"def": 60
 					},
-					"resist": 10,
+					"resist": 20,
 					"block": 0,
 					"range": 170,
 					"max_cost": 31,
@@ -36086,11 +36290,11 @@ webpackJsonp([0],[
 						"at": 468,
 						"def": 91
 					},
-					"resist": 10,
+					"resist": 20,
 					"block": 0,
 					"range": 240,
-					"max_cost": 36,
-					"min_cost": 33,
+					"max_cost": 34,
+					"min_cost": 31,
 					"bonus": {
 						"hp": 198,
 						"at": 120,
@@ -36115,11 +36319,11 @@ webpackJsonp([0],[
 						"at": 576,
 						"def": 110
 					},
-					"resist": 10,
+					"resist": 20,
 					"block": 0,
 					"range": 240,
-					"max_cost": 36,
-					"min_cost": 33,
+					"max_cost": 34,
+					"min_cost": 31,
 					"bonus": {
 						"hp": 198,
 						"at": 120,
@@ -36154,14 +36358,14 @@ webpackJsonp([0],[
 						"at": 402,
 						"def": 58
 					},
-					"resist": 10,
+					"resist": 20,
 					"block": 0,
 					"range": 170,
 					"max_cost": 31,
 					"min_cost": 28,
 					"bonus": {
 						"hp": 0,
-						"at": 58,
+						"at": 70,
 						"def": 0,
 						"stun": 0
 					},
@@ -36183,14 +36387,14 @@ webpackJsonp([0],[
 						"at": 490,
 						"def": 88
 					},
-					"resist": 10,
+					"resist": 20,
 					"block": 0,
 					"range": 240,
-					"max_cost": 36,
-					"min_cost": 33,
+					"max_cost": 34,
+					"min_cost": 31,
 					"bonus": {
 						"hp": 0,
-						"at": 138,
+						"at": 168,
 						"def": 0,
 						"stun": 0
 					},
@@ -36212,14 +36416,14 @@ webpackJsonp([0],[
 						"at": 603,
 						"def": 107
 					},
-					"resist": 10,
+					"resist": 20,
 					"block": 0,
 					"range": 240,
-					"max_cost": 36,
-					"min_cost": 33,
+					"max_cost": 34,
+					"min_cost": 31,
 					"bonus": {
 						"hp": 0,
-						"at": 138,
+						"at": 168,
 						"def": 0,
 						"stun": 0
 					},
@@ -36251,7 +36455,7 @@ webpackJsonp([0],[
 						"at": 348,
 						"def": 63
 					},
-					"resist": 10,
+					"resist": 20,
 					"block": 0,
 					"range": 170,
 					"max_cost": 31,
@@ -36280,11 +36484,11 @@ webpackJsonp([0],[
 						"at": 425,
 						"def": 95
 					},
-					"resist": 10,
+					"resist": 20,
 					"block": 0,
 					"range": 240,
-					"max_cost": 36,
-					"min_cost": 33,
+					"max_cost": 34,
+					"min_cost": 31,
 					"bonus": {
 						"hp": 0,
 						"at": 120,
@@ -36309,11 +36513,11 @@ webpackJsonp([0],[
 						"at": 522,
 						"def": 115
 					},
-					"resist": 10,
+					"resist": 20,
 					"block": 0,
 					"range": 240,
-					"max_cost": 36,
-					"min_cost": 33,
+					"max_cost": 34,
+					"min_cost": 31,
 					"bonus": {
 						"hp": 0,
 						"at": 120,
@@ -36348,7 +36552,7 @@ webpackJsonp([0],[
 						"at": 411,
 						"def": 57
 					},
-					"resist": 10,
+					"resist": 20,
 					"block": 0,
 					"range": 170,
 					"max_cost": 35,
@@ -36377,11 +36581,11 @@ webpackJsonp([0],[
 						"at": 501,
 						"def": 87
 					},
-					"resist": 10,
+					"resist": 20,
 					"block": 0,
 					"range": 240,
-					"max_cost": 40,
-					"min_cost": 35,
+					"max_cost": 38,
+					"min_cost": 33,
 					"bonus": {
 						"hp": 0,
 						"at": 120,
@@ -36406,11 +36610,11 @@ webpackJsonp([0],[
 						"at": 617,
 						"def": 106
 					},
-					"resist": 10,
+					"resist": 20,
 					"block": 0,
 					"range": 240,
-					"max_cost": 40,
-					"min_cost": 35,
+					"max_cost": 38,
+					"min_cost": 33,
 					"bonus": {
 						"hp": 0,
 						"at": 120,
@@ -36445,7 +36649,7 @@ webpackJsonp([0],[
 						"at": 408,
 						"def": 65
 					},
-					"resist": 10,
+					"resist": 25,
 					"block": 0,
 					"range": 170,
 					"max_cost": 32,
@@ -36474,11 +36678,11 @@ webpackJsonp([0],[
 						"at": 510,
 						"def": 103
 					},
-					"resist": 10,
+					"resist": 25,
 					"block": 0,
 					"range": 240,
-					"max_cost": 37,
-					"min_cost": 34,
+					"max_cost": 35,
+					"min_cost": 32,
 					"bonus": {
 						"hp": 0,
 						"at": 144,
@@ -36503,11 +36707,11 @@ webpackJsonp([0],[
 						"at": 626,
 						"def": 123
 					},
-					"resist": 10,
+					"resist": 25,
 					"block": 0,
 					"range": 240,
-					"max_cost": 37,
-					"min_cost": 34,
+					"max_cost": 35,
+					"min_cost": 32,
 					"bonus": {
 						"hp": 0,
 						"at": 144,
@@ -37113,6 +37317,103 @@ webpackJsonp([0],[
 			]
 		},
 		{
+			"name": "妖精女王シーディス",
+			"class_type": "ヒーラー",
+			"type": "range",
+			"rare": "プラチナ",
+			"rare_lv": 5,
+			"img": "http://i.gyazo.com/c4f97afe78c5ac8a0dcf5ab2b3200a8f.png",
+			"class_list": [
+				{
+					"name": "ヒーラー",
+					"min": {
+						"lv": 1,
+						"hp": 485,
+						"at": 144,
+						"def": 39
+					},
+					"max": {
+						"lv": 50,
+						"hp": 720,
+						"at": 243,
+						"def": 89
+					},
+					"resist": 5,
+					"block": 0,
+					"range": 220,
+					"max_cost": 18,
+					"min_cost": 15,
+					"bonus": {
+						"hp": 0,
+						"at": 50,
+						"def": 20,
+						"stun": 0
+					},
+					"skill_1": "星の杖",
+					"skill_2": "",
+					"skill_3": ""
+				},
+				{
+					"name": "プリースト",
+					"min": {
+						"lv": 1,
+						"hp": 723,
+						"at": 246,
+						"def": 90
+					},
+					"max": {
+						"lv": 70,
+						"hp": 930,
+						"at": 430,
+						"def": 145
+					},
+					"resist": 5,
+					"block": 0,
+					"range": 260,
+					"max_cost": 21,
+					"min_cost": 18,
+					"bonus": {
+						"hp": 0,
+						"at": 120,
+						"def": 48,
+						"stun": 0
+					},
+					"skill_1": "",
+					"skill_2": "",
+					"skill_3": ""
+				},
+				{
+					"name": "セイント",
+					"min": {
+						"lv": 1,
+						"hp": 879,
+						"at": 402,
+						"def": 122
+					},
+					"max": {
+						"lv": 90,
+						"hp": 1170,
+						"at": 505,
+						"def": 184
+					},
+					"resist": 5,
+					"block": 0,
+					"range": 260,
+					"max_cost": 21,
+					"min_cost": 18,
+					"bonus": {
+						"hp": 0,
+						"at": 120,
+						"def": 48,
+						"stun": 0
+					},
+					"skill_1": "星の杖",
+					"skill_2": "魔法耐性",
+					"skill_3": ""
+				}
+			]
+		},
+		{
 			"name": "慈愛の祈りサーリア",
 			"class_type": "ヒーラー",
 			"type": "range",
@@ -37210,39 +37511,39 @@ webpackJsonp([0],[
 			]
 		},
 		{
-			"name": "妖精女王シーディス",
+			"name": "背反の癒し手ユーノ",
 			"class_type": "ヒーラー",
 			"type": "range",
 			"rare": "プラチナ",
 			"rare_lv": 5,
-			"img": "http://i.gyazo.com/c4f97afe78c5ac8a0dcf5ab2b3200a8f.png",
+			"img": "http://gyazo.com/fb3206df6f9eb0aedb9a9ea845ebe364.png",
 			"class_list": [
 				{
 					"name": "ヒーラー",
 					"min": {
-						"lv": 1,
-						"hp": 485,
-						"at": 144,
-						"def": 39
+						"lv": 5,
+						"hp": 687,
+						"at": 139,
+						"def": 43
 					},
 					"max": {
 						"lv": 50,
-						"hp": 720,
-						"at": 243,
-						"def": 89
+						"hp": 980,
+						"at": 221,
+						"def": 88
 					},
-					"resist": 5,
+					"resist": 0,
 					"block": 0,
 					"range": 220,
-					"max_cost": 18,
+					"max_cost": 20,
 					"min_cost": 15,
 					"bonus": {
-						"hp": 0,
+						"hp": 83,
 						"at": 50,
-						"def": 20,
+						"def": 0,
 						"stun": 0
 					},
-					"skill_1": "星の杖",
+					"skill_1": "イービルフォース",
 					"skill_2": "",
 					"skill_3": ""
 				},
@@ -37250,25 +37551,25 @@ webpackJsonp([0],[
 					"name": "プリースト",
 					"min": {
 						"lv": 1,
-						"hp": 723,
-						"at": 246,
-						"def": 90
+						"hp": 985,
+						"at": 224,
+						"def": 89
 					},
 					"max": {
 						"lv": 70,
-						"hp": 930,
-						"at": 430,
-						"def": 145
+						"hp": 1268,
+						"at": 391,
+						"def": 144
 					},
-					"resist": 5,
+					"resist": 0,
 					"block": 0,
 					"range": 260,
-					"max_cost": 21,
+					"max_cost": 23,
 					"min_cost": 18,
 					"bonus": {
-						"hp": 0,
+						"hp": 198,
 						"at": 120,
-						"def": 48,
+						"def": 0,
 						"stun": 0
 					},
 					"skill_1": "",
@@ -37279,29 +37580,29 @@ webpackJsonp([0],[
 					"name": "セイント",
 					"min": {
 						"lv": 1,
-						"hp": 879,
-						"at": 402,
-						"def": 122
+						"hp": 1198,
+						"at": 365,
+						"def": 121
 					},
 					"max": {
 						"lv": 90,
-						"hp": 1170,
-						"at": 505,
-						"def": 184
+						"hp": 1595,
+						"at": 459,
+						"def": 183
 					},
-					"resist": 5,
+					"resist": 0,
 					"block": 0,
 					"range": 260,
-					"max_cost": 21,
+					"max_cost": 23,
 					"min_cost": 18,
 					"bonus": {
-						"hp": 0,
+						"hp": 198,
 						"at": 120,
-						"def": 48,
+						"def": 0,
 						"stun": 0
 					},
-					"skill_1": "星の杖",
-					"skill_2": "魔法耐性",
+					"skill_1": "イービルフォース",
+					"skill_2": "ヒーラーの;攻撃力アップ",
 					"skill_3": ""
 				}
 			]
@@ -37955,7 +38256,7 @@ webpackJsonp([0],[
 					"max_cost": 12,
 					"min_cost": 9,
 					"bonus": {
-						"hp": 83,
+						"hp": 0,
 						"at": 50,
 						"def": 0,
 						"stun": 0
@@ -37984,8 +38285,8 @@ webpackJsonp([0],[
 					"max_cost": 15,
 					"min_cost": 12,
 					"bonus": {
-						"hp": 198,
-						"at": 120,
+						"hp": 0,
+						"at": 168,
 						"def": 0,
 						"stun": 0
 					},
@@ -38003,7 +38304,7 @@ webpackJsonp([0],[
 					},
 					"max": {
 						"lv": 90,
-						"hp": 1779,
+						"hp": 1581,
 						"at": 410,
 						"def": 101
 					},
@@ -38013,8 +38314,8 @@ webpackJsonp([0],[
 					"max_cost": 15,
 					"min_cost": 12,
 					"bonus": {
-						"hp": 198,
-						"at": 120,
+						"hp": 0,
+						"at": 168,
 						"def": 0,
 						"stun": 0
 					},
@@ -38139,7 +38440,7 @@ webpackJsonp([0],[
 					},
 					"max": {
 						"lv": 50,
-						"hp": 885,
+						"hp": 884,
 						"at": 210,
 						"def": 61
 					},
@@ -39392,7 +39693,7 @@ webpackJsonp([0],[
 					"max": {
 						"lv": 50,
 						"hp": 1231,
-						"at": 192,
+						"at": 202,
 						"def": 166
 					},
 					"resist": 0,
@@ -39460,7 +39761,7 @@ webpackJsonp([0],[
 					"max": {
 						"lv": 60,
 						"hp": 1440,
-						"at": 244,
+						"at": 257,
 						"def": 160
 					},
 					"resist": 0,
@@ -39489,7 +39790,7 @@ webpackJsonp([0],[
 					"max": {
 						"lv": 80,
 						"hp": 1805,
-						"at": 285,
+						"at": 303,
 						"def": 198
 					},
 					"resist": 0,
@@ -39528,7 +39829,7 @@ webpackJsonp([0],[
 					"max": {
 						"lv": 50,
 						"hp": 1125,
-						"at": 180,
+						"at": 192,
 						"def": 163
 					},
 					"resist": 0,
@@ -39550,8 +39851,8 @@ webpackJsonp([0],[
 					"name": "ヴァンパイアキラー",
 					"min": {
 						"lv": 1,
-						"hp": 1131,
-						"at": 181,
+						"hp": 1130,
+						"at": 193,
 						"def": 164
 					},
 					"max": {
@@ -39586,7 +39887,7 @@ webpackJsonp([0],[
 					"max": {
 						"lv": 90,
 						"hp": 1944,
-						"at": 270,
+						"at": 288,
 						"def": 256
 					},
 					"resist": 0,
@@ -39625,7 +39926,7 @@ webpackJsonp([0],[
 					"max": {
 						"lv": 50,
 						"hp": 1152,
-						"at": 171,
+						"at": 182,
 						"def": 160
 					},
 					"resist": 0,
@@ -39654,7 +39955,7 @@ webpackJsonp([0],[
 					"max": {
 						"lv": 70,
 						"hp": 1600,
-						"at": 221,
+						"at": 233,
 						"def": 203
 					},
 					"resist": 0,
@@ -39677,13 +39978,13 @@ webpackJsonp([0],[
 					"min": {
 						"lv": 1,
 						"hp": 1414,
-						"at": 201,
+						"at": 212,
 						"def": 186
 					},
 					"max": {
 						"lv": 90,
 						"hp": 1990,
-						"at": 257,
+						"at": 274,
 						"def": 252
 					},
 					"resist": 0,
@@ -39780,7 +40081,7 @@ webpackJsonp([0],[
 					"max": {
 						"lv": 99,
 						"hp": 2080,
-						"at": 311,
+						"at": 331,
 						"def": 284
 					},
 					"resist": 0,
@@ -40113,7 +40414,7 @@ webpackJsonp([0],[
 						"at": 330,
 						"def": 55
 					},
-					"resist": 10,
+					"resist": 15,
 					"block": 0,
 					"range": 170,
 					"max_cost": 29,
@@ -40142,11 +40443,11 @@ webpackJsonp([0],[
 						"at": 372,
 						"def": 76
 					},
-					"resist": 10,
+					"resist": 15,
 					"block": 0,
 					"range": 260,
-					"max_cost": 34,
-					"min_cost": 31,
+					"max_cost": 32,
+					"min_cost": 29,
 					"bonus": {
 						"hp": 0,
 						"at": 48,
@@ -40181,7 +40482,7 @@ webpackJsonp([0],[
 						"at": 315,
 						"def": 51
 					},
-					"resist": 10,
+					"resist": 15,
 					"block": 0,
 					"range": 170,
 					"max_cost": 29,
@@ -40210,11 +40511,11 @@ webpackJsonp([0],[
 						"at": 355,
 						"def": 70
 					},
-					"resist": 10,
+					"resist": 15,
 					"block": 0,
 					"range": 260,
-					"max_cost": 34,
-					"min_cost": 31,
+					"max_cost": 32,
+					"min_cost": 29,
 					"bonus": {
 						"hp": 0,
 						"at": 96,
@@ -40249,7 +40550,7 @@ webpackJsonp([0],[
 						"at": 405,
 						"def": 55
 					},
-					"resist": 10,
+					"resist": 15,
 					"block": 0,
 					"range": 170,
 					"max_cost": 33,
@@ -40278,11 +40579,11 @@ webpackJsonp([0],[
 						"at": 466,
 						"def": 80
 					},
-					"resist": 10,
+					"resist": 15,
 					"block": 0,
 					"range": 260,
-					"max_cost": 38,
-					"min_cost": 33,
+					"max_cost": 36,
+					"min_cost": 31,
 					"bonus": {
 						"hp": 0,
 						"at": 108,
@@ -40307,11 +40608,11 @@ webpackJsonp([0],[
 						"at": 555,
 						"def": 98
 					},
-					"resist": 10,
+					"resist": 15,
 					"block": 0,
 					"range": 260,
-					"max_cost": 38,
-					"min_cost": 33,
+					"max_cost": 36,
+					"min_cost": 31,
 					"bonus": {
 						"hp": 0,
 						"at": 108,
@@ -40346,7 +40647,7 @@ webpackJsonp([0],[
 						"at": 444,
 						"def": 71
 					},
-					"resist": 15,
+					"resist": 30,
 					"block": 0,
 					"range": 170,
 					"max_cost": 32,
@@ -40375,11 +40676,11 @@ webpackJsonp([0],[
 						"at": 522,
 						"def": 108
 					},
-					"resist": 15,
+					"resist": 30,
 					"block": 0,
 					"range": 260,
-					"max_cost": 37,
-					"min_cost": 34,
+					"max_cost": 35,
+					"min_cost": 32,
 					"bonus": {
 						"hp": 0,
 						"at": 60,
@@ -40404,11 +40705,11 @@ webpackJsonp([0],[
 						"at": 623,
 						"def": 131
 					},
-					"resist": 15,
+					"resist": 30,
 					"block": 0,
 					"range": 260,
-					"max_cost": 37,
-					"min_cost": 34,
+					"max_cost": 35,
+					"min_cost": 32,
 					"bonus": {
 						"hp": 0,
 						"at": 60,
@@ -40443,7 +40744,7 @@ webpackJsonp([0],[
 						"at": 399,
 						"def": 58
 					},
-					"resist": 10,
+					"resist": 25,
 					"block": 0,
 					"range": 170,
 					"max_cost": 32,
@@ -40472,11 +40773,11 @@ webpackJsonp([0],[
 						"at": 469,
 						"def": 88
 					},
-					"resist": 10,
+					"resist": 25,
 					"block": 0,
 					"range": 260,
-					"max_cost": 37,
-					"min_cost": 34,
+					"max_cost": 35,
+					"min_cost": 32,
 					"bonus": {
 						"hp": 0,
 						"at": 120,
@@ -40501,11 +40802,11 @@ webpackJsonp([0],[
 						"at": 560,
 						"def": 107
 					},
-					"resist": 10,
+					"resist": 25,
 					"block": 0,
 					"range": 260,
-					"max_cost": 37,
-					"min_cost": 34,
+					"max_cost": 35,
+					"min_cost": 32,
 					"bonus": {
 						"hp": 0,
 						"at": 120,
@@ -40540,7 +40841,7 @@ webpackJsonp([0],[
 						"at": 414,
 						"def": 61
 					},
-					"resist": 10,
+					"resist": 25,
 					"block": 0,
 					"range": 170,
 					"max_cost": 34,
@@ -40569,11 +40870,11 @@ webpackJsonp([0],[
 						"at": 487,
 						"def": 92
 					},
-					"resist": 10,
+					"resist": 25,
 					"block": 0,
 					"range": 260,
-					"max_cost": 39,
-					"min_cost": 34,
+					"max_cost": 37,
+					"min_cost": 32,
 					"bonus": {
 						"hp": 276,
 						"at": 0,
@@ -40598,11 +40899,11 @@ webpackJsonp([0],[
 						"at": 581,
 						"def": 111
 					},
-					"resist": 10,
+					"resist": 25,
 					"block": 0,
 					"range": 260,
-					"max_cost": 39,
-					"min_cost": 34,
+					"max_cost": 37,
+					"min_cost": 32,
 					"bonus": {
 						"hp": 276,
 						"at": 0,
@@ -40740,9 +41041,9 @@ webpackJsonp([0],[
 					},
 					"max": {
 						"lv": 99,
-						"hp": 1200,
+						"hp": 1500,
 						"at": 980,
-						"def": 190
+						"def": 320
 					},
 					"resist": 0,
 					"block": 1,
@@ -41687,7 +41988,7 @@ webpackJsonp([0],[
 						"lv": 1,
 						"hp": 813,
 						"at": 358,
-						"def": 59
+						"def": 58
 					},
 					"max": {
 						"lv": 60,
@@ -42232,7 +42533,7 @@ webpackJsonp([0],[
 			"type": "range",
 			"rare": "ブラック",
 			"rare_lv": 6,
-			"img": "http://i.gyazo.com/3e7726ca3d0033d2a341fac60243990a.png",
+			"img": "http://i.gyazo.com/88796bc48cf145808e2422eb24fd862b.png",
 			"class_list": [
 				{
 					"name": "政務官",
@@ -42600,8 +42901,8 @@ webpackJsonp([0],[
 			"name": "生命の木",
 			"class_type": "-",
 			"type": "range",
-			"rare": "ゴールド",
-			"rare_lv": 4,
+			"rare": "プラチナ",
+			"rare_lv": 5,
 			"img": "http://i.gyazo.com/862dcf86650dd0d60a2c96238b9db3e3.png",
 			"class_list": [
 				{
@@ -42613,15 +42914,44 @@ webpackJsonp([0],[
 						"def": 20
 					},
 					"max": {
-						"lv": 70,
-						"hp": 625,
-						"at": 205,
-						"def": 46
+						"lv": 60,
+						"hp": 0,
+						"at": 0,
+						"def": 0
 					},
 					"resist": 0,
 					"block": 0,
 					"range": 140,
 					"max_cost": 6,
+					"min_cost": 0,
+					"bonus": {
+						"hp": 0,
+						"at": 0,
+						"def": 0,
+						"stun": 0
+					},
+					"skill_1": "",
+					"skill_2": "",
+					"skill_3": ""
+				},
+				{
+					"name": "",
+					"min": {
+						"lv": 70,
+						"hp": 625,
+						"at": 205,
+						"def": 46
+					},
+					"max": {
+						"lv": 0,
+						"hp": 0,
+						"at": 0,
+						"def": 0
+					},
+					"resist": 0,
+					"block": 0,
+					"range": 0,
+					"max_cost": 0,
 					"min_cost": 0,
 					"bonus": {
 						"hp": 0,
@@ -42894,6 +43224,132 @@ webpackJsonp([0],[
 					"skill_1": "",
 					"skill_2": "",
 					"skill_3": ""
+				},
+				{
+					"name": "マスターレンジャー",
+					"min": {
+						"lv": 1,
+						"hp": 1213,
+						"at": 294,
+						"def": 141
+					},
+					"max": {
+						"lv": 80,
+						"hp": 1476,
+						"at": 406,
+						"def": 192
+					},
+					"resist": 0,
+					"block": 0,
+					"range": 260,
+					"max_cost": 14,
+					"min_cost": 11,
+					"bonus": {
+						"hp": 0,
+						"at": 108,
+						"def": 0,
+						"stun": 0
+					},
+					"skill_1": "ダブルショット",
+					"skill_2": "トークン所持数アップ",
+					"skill_3": ""
+				}
+			]
+		},
+		{
+			"name": "聖森の番人リコラ",
+			"class_type": "レンジャー",
+			"type": "range",
+			"rare": "プラチナ",
+			"rare_lv": 5,
+			"img": "http://gyazo.com/52fe68c02e5c1dfef194b49d9c62158d.png",
+			"class_list": [
+				{
+					"name": "レンジャー",
+					"min": {
+						"lv": 1,
+						"hp": 714,
+						"at": 157,
+						"def": 77
+					},
+					"max": {
+						"lv": 50,
+						"hp": 1003,
+						"at": 228,
+						"def": 127
+					},
+					"resist": 0,
+					"block": 0,
+					"range": 200,
+					"max_cost": 14,
+					"min_cost": 9,
+					"bonus": {
+						"hp": 0,
+						"at": 70,
+						"def": 0,
+						"stun": 0
+					},
+					"skill_1": "隠密",
+					"skill_2": "",
+					"skill_3": ""
+				},
+				{
+					"name": "ハイレンジャー",
+					"min": {
+						"lv": 1,
+						"hp": 1008,
+						"at": 229,
+						"def": 128
+					},
+					"max": {
+						"lv": 70,
+						"hp": 1364,
+						"at": 312,
+						"def": 177
+					},
+					"resist": 0,
+					"block": 0,
+					"range": 240,
+					"max_cost": 17,
+					"min_cost": 12,
+					"bonus": {
+						"hp": 0,
+						"at": 168,
+						"def": 0,
+						"stun": 0
+					},
+					"skill_1": "",
+					"skill_2": "",
+					"skill_3": ""
+				},
+				{
+					"name": "マスターレンジャー",
+					"min": {
+						"lv": 1,
+						"hp": 1302,
+						"at": 289,
+						"def": 166
+					},
+					"max": {
+						"lv": 90,
+						"hp": 1620,
+						"at": 414,
+						"def": 235
+					},
+					"resist": 0,
+					"block": 0,
+					"range": 260,
+					"max_cost": 17,
+					"min_cost": 12,
+					"bonus": {
+						"hp": 0,
+						"at": 168,
+						"def": 0,
+						"stun": 0
+					},
+					"skill_1": "隠密",
+					"skill_2": "射撃優先",
+					"skill_3": ""
 				}
 			]
 		},
@@ -42901,9 +43357,9 @@ webpackJsonp([0],[
 			"name": "トラップ",
 			"class_type": "-",
 			"type": "melee",
-			"rare": "ゴールド",
-			"rare_lv": 4,
-			"img": "http://i.gyazo.com/603010d4698e9e2b3f2103b0c1db1634.png",
+			"rare": "プラチナ",
+			"rare_lv": 5,
+			"img": "https://i.gyazo.com/cac1e6d7679cfb76eac4d150820ae7aa.png",
 			"class_list": [
 				{
 					"name": "-",
@@ -42940,8 +43396,8 @@ webpackJsonp([0],[
 			"name": "強化トラップ",
 			"class_type": "-",
 			"type": "melee",
-			"rare": "ゴールド",
-			"rare_lv": 4,
+			"rare": "プラチナ",
+			"rare_lv": 5,
 			"img": "http://yui.oopsup.com/readfile.php/aigiswiki2/1440633775_0.png",
 			"class_list": [
 				{
@@ -42962,6 +43418,103 @@ webpackJsonp([0],[
 					"block": 1,
 					"range": 0,
 					"max_cost": 3,
+					"min_cost": 0,
+					"bonus": {
+						"hp": 0,
+						"at": 0,
+						"def": 0,
+						"stun": 0
+					},
+					"skill_1": "",
+					"skill_2": "",
+					"skill_3": ""
+				},
+				{
+					"name": "",
+					"min": {
+						"lv": 70,
+						"hp": 675,
+						"at": 475,
+						"def": 128
+					},
+					"max": {
+						"lv": 0,
+						"hp": 0,
+						"at": 0,
+						"def": 0
+					},
+					"resist": 0,
+					"block": 0,
+					"range": 0,
+					"max_cost": 0,
+					"min_cost": 0,
+					"bonus": {
+						"hp": 0,
+						"at": 0,
+						"def": 0,
+						"stun": 0
+					},
+					"skill_1": "",
+					"skill_2": "",
+					"skill_3": ""
+				}
+			]
+		},
+		{
+			"name": "超強化トラップ",
+			"class_type": "-",
+			"type": "melee",
+			"rare": "プラチナ",
+			"rare_lv": 5,
+			"img": "http://gyazo.com/994aeb14f142177f4c851a69c82589b4.png",
+			"class_list": [
+				{
+					"name": "-",
+					"min": {
+						"lv": 1,
+						"hp": 614,
+						"at": 414,
+						"def": 122
+					},
+					"max": {
+						"lv": 80,
+						"hp": 925,
+						"at": 725,
+						"def": 153
+					},
+					"resist": 0,
+					"block": 1,
+					"range": 0,
+					"max_cost": 3,
+					"min_cost": 0,
+					"bonus": {
+						"hp": 0,
+						"at": 0,
+						"def": 0,
+						"stun": 0
+					},
+					"skill_1": "",
+					"skill_2": "",
+					"skill_3": ""
+				},
+				{
+					"name": "",
+					"min": {
+						"lv": 90,
+						"hp": 0,
+						"at": 0,
+						"def": 0
+					},
+					"max": {
+						"lv": 0,
+						"hp": 0,
+						"at": 0,
+						"def": 0
+					},
+					"resist": 0,
+					"block": 0,
+					"range": 0,
+					"max_cost": 0,
 					"min_cost": 0,
 					"bonus": {
 						"hp": 0,
