@@ -63,12 +63,11 @@ class ClassCharList extends Component
       display = ""
 
     return @table {className: mdl-table-style, id: "char-list-table", style:{display: display}},
-
-             @tr {id: "char-table-header"},
-               for th-value, i in th-list
-                 @th {key: i}, th-value
-
              @tbody {},
+               @tr {id: "char-table-header"},
+                 for th-value, i in th-list
+                   @th {key: i}, th-value
+
                for char, i in list
                  ClassCharListDetail.elem {key:i, class_name: name, char: char}
 
