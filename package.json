@@ -11,36 +11,54 @@
     }
   ],
   "scripts": {
-      "crawler": "node build/crawler.js",
-      "parser": "node build/parser.js"
+      "crawler": "lsc ./parser/crawler.ls --nodejs --harmony",
+      "parser": "lsc ./parser/parser.ls --nodejs --harmoy",
+      "start": "node-dev server.ls",
+      "build": "webpack --config webpack.front.config.ls"
   },
   "devDependencies": {
-    "gulp": "^3.7.0",
-    "gulp-util": "",
-    "webpack": "",
+    "webpack":"",
     "webpack-dev-server":"",
-    "html-webpack-plugin":"",
-    "livescript-loader": "",
     "livescript": "",
-    "require-dir": "^0.1.0",
     "bower": "",
-    "json-loader": "",
-    "source-map-support": "",
-    "react-hot-loader": "",
+
+    "livescript-loader": "",
     "style-loader": "",
     "sass-loader": "",
     "css-loader": "",
-    "react-redux": "",
-    "redux-devtools": ""
-  },
+    "url-loader": "",
+    "file-loader": "",
+    "react-hot-loader": "",
+    "json-loader": "",
+
+    "node-sass": "",
+
+    "source-map-support": "",
+    "html-webpack-plugin": "",
+
+    "lorem-ipsum": ""
+  },  
   "dependencies": {
+    "react": "^0.14.0",
+    "react-dom": "^0.14.0",
+    "redux": "",
+    "react-redux": "^4.0.0",
+    "react-router": "^1.0.0",
+
+    "lokijs": "",
+
+    "hapi": "",
+    "hapi-swagger": "",
+    "inert": "",
+    "vision": "",
+    "joi": "",
+    "good-console": "",
+
     "ws": "",
-    "deep-merge":"",
     "cheerio":"",
-    "lokijs":"",
     "request": "",
     "jconv": "",
-    "react": "",
-    "redux": ""
+
+    "winston": ""
   }
 }

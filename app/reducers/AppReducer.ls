@@ -1,5 +1,5 @@
 require! {
-  "redux": {combineReducers} 
+  "redux": {combineReducers, createStore} 
   "../actions/AppActions": Actions
 }
 
@@ -82,4 +82,4 @@ const sennenData = combineReducers {
   range_chars
 }
 
-module.exports = sennenData
+module.exports = createStore sennenData

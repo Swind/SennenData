@@ -1,12 +1,30 @@
 require! {
     "html-webpack-plugin": HtmlWebpackPlugin
+    "debug": debug
     "webpack": webpack
+    "path": path
+    "fs": fs
 }
 
-bower_dir = __dirname + "/../bower_components"
-node_dir = __dirname + "/../node_modules"
-build_dir = __dirname + "/../build"
+/*==========================================================
+*
+*    Prepare variables 
+*
+============================================================*/
+ROOT_PATH = path.resolve __dirname, ""
 
+bower_dir = path.resolve ROOT_PATH, "bower_components"
+node_dir = path.resolve ROOT_PATH, "node_modules"
+build_dir = path.resolve ROOT_PATH, "public"
+
+main_js = path.resolve ROOT_PATH, "app/sennen.ls"
+index_tmp = path.resolve ROOT_PATH, "app/index.html"
+
+/*==========================================================
+*
+*    Utils 
+*
+============================================================*/
 addVendor = (type, name, path, config) ->
     config.resolve.alias[name] = path
 
@@ -15,12 +33,16 @@ addVendor = (type, name, path, config) ->
     if type == \js
         config.entry.vendors.push name
 
-frontendDevConfig = {
-
+/*==========================================================
+*
+*    Config 
+*
+============================================================*/
+module.exports = {
     entry: {
-        webpack-dev-server: "webpack-dev-server/client?http://0.0.0.0:8080"
-        only-dev-server: "webpack/hot/only-dev-server"
-        bundle: "./web/sennen.ls"
+      #webpack-dev-server: "webpack-dev-server/client?http://0.0.0.0:8080"
+      #only-dev-server: "webpack/hot/only-dev-server"
+        bundle: main_js
         vendors: []
     }
     module:{
@@ -46,33 +68,17 @@ frontendDevConfig = {
         extensions: ['', '.ls', '.js', '.json']
     }
     output: {
-        path: build_dir 
+        path: build_dir
         filename: "[name].js"
     }
     plugins: [
         new HtmlWebpackPlugin {
-            template: "web/index.html"
-            inject: true 
+          template: index_tmp
+          inject: true
         }
         new webpack.optimize.CommonsChunkPlugin "vendors", "vendors.js"
         new webpack.HotModuleReplacementPlugin!
     ]
     devtool: \sourcemap
     debug: true
-}
-
-addVendor \js, \lokijs, node_dir + "/lokijs/src/lokijs.js", frontendDevConfig
-
-frontendConfig = ! ->
-    config = {} <<< frontendDevConfig
-
-    delete config[\devtool]
-    delete config[\debug]
-
-    return config
-
-
-module.exports = {
-    dev: frontendDevConfig
-    production: frontendConfig!
 }
